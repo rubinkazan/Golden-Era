@@ -205,7 +205,9 @@ public class Login extends javax.swing.JFrame {
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         int user = Integer.parseInt(txtUser.getText());
         String pass = txtPass.getText();
-        Login_Check.CoLogin(user,pass);
+        Login_Check_Members.CoLogin(user,pass);
+        Login_Check_Staff.CoLogin(user,pass);
+
        // JOptionPane.showMessageDialog(rootPane, "User does not exist. Please try again or Register an account");
     }//GEN-LAST:event_btnSubmitActionPerformed
 

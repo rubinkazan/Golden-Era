@@ -7,7 +7,7 @@ import java.sql.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Login_Check {
+public class Login_Check_Members {
     
     public static void CoLogin(int username, String password){
 
