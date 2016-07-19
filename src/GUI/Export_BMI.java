@@ -7,9 +7,10 @@ import java.io.PrintWriter;
 
 public class Export_BMI {
     
-        public void BMI_Calc(double weight, double height){
+        public static double BMI_Calc(double weight, double height){
         height = height / 100;
         double bmi = (height * height) / weight;
+        return bmi;
      
     }
         

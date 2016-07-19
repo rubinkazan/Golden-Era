@@ -228,15 +228,16 @@ x.setVisible(true);
     private void btnCakcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCakcActionPerformed
 double weight = Double.parseDouble(txtWeight.getText());
 double height = (Double.parseDouble(txtHeight.getText()) / 100);
-
-double BMI = (height * height) / weight;
-txaDisplay.append(BMI + "");
+txaDisplay.append(Export_BMI.BMI_Calc(weight,height) + "");
 
 
     }//GEN-LAST:event_btnCakcActionPerformed
 
     private void btnExportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportActionPerformed
-
+double weight = Double.parseDouble(txtWeight.getText());
+double height = (Double.parseDouble(txtHeight.getText()) / 100);
+Export_BMI.BMI_Calc(weight,height);
+Export_BMI.ExportPDF();
     }//GEN-LAST:event_btnExportActionPerformed
 
     public static void main(String args[]) {
