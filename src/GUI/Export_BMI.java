@@ -13,7 +13,7 @@ public class Export_BMI {
      
     }
         
-    public static void Export(){
+    public void ExportPDF(){
         //Fetch current logged in user from SQL database name and set it as file name
         //String name = SQL.....name;
         File filename = new File(name);
@@ -25,7 +25,9 @@ public class Export_BMI {
                 FileWriter fileWriter = new FileWriter(filename);
             }
             y = new PrintWriter(filename);
-            y.println(BMI_Calc());
+            //Print the currently logged in user Name/Surname/Gender/DOB and BMI
+            //y.println()
+            //y.println(bmi);
                       
         }catch (Exception f){
             f.printStackTrace();
