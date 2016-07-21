@@ -18,8 +18,8 @@ public class Main_Staff extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        btnMembers = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        btnManage = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -28,14 +28,14 @@ public class Main_Staff extends javax.swing.JFrame {
 
         jLabel2.setText("Welcome, ");
 
-        btnMembers.setText("View Members");
-        btnMembers.addActionListener(new java.awt.event.ActionListener() {
+        jButton3.setText("View PT Members");
+
+        btnManage.setText("Manage Members");
+        btnManage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMembersActionPerformed(evt);
+                btnManageActionPerformed(evt);
             }
         });
-
-        jButton3.setText("View PT Members");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -52,7 +52,9 @@ public class Main_Staff extends javax.swing.JFrame {
                         .addGap(26, 26, 26)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton3)
-                            .addComponent(btnMembers))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(btnManage)))))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -65,11 +67,11 @@ public class Main_Staff extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
                         .addComponent(jLabel2)
-                        .addGap(48, 48, 48)
-                        .addComponent(btnMembers)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3)))
-                .addContainerGap(339, Short.MAX_VALUE))
+                        .addGap(95, 95, 95)
+                        .addComponent(btnManage)))
+                .addGap(18, 18, 18)
+                .addComponent(jButton3)
+                .addContainerGap(292, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -86,10 +88,9 @@ public class Main_Staff extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnMembersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMembersActionPerformed
-      Members_Table x = new Members_Table();
-      x.setVisible(true);
-    }//GEN-LAST:event_btnMembersActionPerformed
+    private void btnManageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageActionPerformed
+ 
+    }//GEN-LAST:event_btnManageActionPerformed
 
     /**
      * @param args the command line arguments
@@ -104,7 +105,7 @@ public class Main_Staff extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnMembers;
+    private javax.swing.JButton btnManage;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
