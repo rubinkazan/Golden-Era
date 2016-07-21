@@ -293,20 +293,20 @@ public class Members_Table extends javax.swing.JFrame {
         int i = jTable1.getSelectedRow();
         TableModel model = jTable1.getModel();
         
-        txtid.setText(model.getValuteAt(i,0).toInt());
-        txtSname.setText(model.getValuteAt(i,1).toString());
-        txtFname.setText(model.getValuteAt(i,2).toString());
-        txtDOB.setText(model.getValuteAt(i,3).toString());
-        txtEmail.setText(model.getValuteAt(i,4).toString());
-        txtPassword.setText(model.getValuteAt(i,5).toString());
-        txtGender.setText(model.getValuteAt(i,6).toString());
+        txtid.setText(model.getValueAt(i,0).toString());
+        txtSname.setText(model.getValueAt(i,1).toString());
+        txtFname.setText(model.getValueAt(i,2).toString());
+        txtDOB.setText(model.getValueAt(i,3).toString());
+        txtEmail.setText(model.getValueAt(i,4).toString());
+        txtPassword.setText(model.getValueAt(i,5).toString());
+        txtGender.setText(model.getValueAt(i,6).toString());
        
 
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        String query = ("INSERT INTO MEMBERS " + 
-                "VALUES ("  + Integer.parseInt(txtid.getText()) + ", '" +  txtSname.getText() + "', '" + txtFname.getText() + "', '"  + txtDOB.getText()) + "','" + txtEmail.getText() + "','" + txtPassword.getText(); +"','" + txtGender.getText() + "')"); 
+        String query = "INSERT INTO MEMBERS " + 
+                "VALUES (" + Integer.parseInt(txtid.getText()) + ", '" +  txtSname.getText() + "','" + txtFname.getText() + "', '"  + txtDOB.getText()) + "','" + txtEmail.getText() + "','" + txtPassword.getText() + "','" + txtGender.getText() + "'" + ")"; 
             
     }//GEN-LAST:event_btnRegisterActionPerformed
 

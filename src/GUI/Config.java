@@ -69,7 +69,7 @@ public class Config {
     }
     
     
-    
+    //https://github.com/rubinkazan/Golden-Era/blob/master/src/GUI/Config.java
     
     //Fetches data from database and stores in ArrayList
     public ArrayList<Config>getMembers(){
