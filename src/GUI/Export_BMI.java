@@ -20,7 +20,7 @@ public class Export_BMI {
         File filename = new File(name);
         
         try{
-            PrintWriter x = new PrintWriter(new FileWriter(filename + ".pdf"));
+            PrintWriter x = new PrintWriter(new FileWriter(filename + ".txt"));
             PrintWriter y;
             if(!filename.exists()){
                 FileWriter fileWriter = new FileWriter(filename);

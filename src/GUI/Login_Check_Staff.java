@@ -31,7 +31,7 @@ public class Login_Check_Staff {
             }
                    
             if(user == dbuser && (pass.equals(dbpass))){
-                     Main x = new Main();
+                     Main_Staff x = new Main_Staff();
                      x.setVisible(true);
             } 
             else{
