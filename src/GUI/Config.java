@@ -101,18 +101,6 @@ public class Config {
     
 
     
-    public void SQLSUD(String query, String message){
-        Connection con = getConnection();
-        
-        try{
-            Statement stmt = con.createStatement();
-            
-            if((stmt.executeUpdate(query)) == 1){
-                DefaultTableModel model = (DefaultTableModel)displaymembers.getModel();
-                model.setRowCount(0);
-                
-            }
-        }
-    }
+    
     
 }
