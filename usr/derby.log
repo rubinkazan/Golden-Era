@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Aug 10 22:07:50 SAST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0156-7611-7437-0000031cc750 
+on database directory /Users/rubinkazan/Aesthetics/Grade 12 PAT/Phase 3/Golden-Era/usr/database with class loader sun.misc.Launcher$AppClassLoader@3cd1a2f1 
+Loaded from file:/Users/rubinkazan/Apache/db-derby-10.12.1.1-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_51-b16
+user.dir=/Users/rubinkazan/Aesthetics/Grade 12 PAT/Phase 3/Golden-Era/usr
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.10.5
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

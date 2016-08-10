@@ -9,34 +9,59 @@ import java.sql.SQLException;
 
 public class Login_Check_Members {
     
-    public static void CoLogin(int username, String password){
+    private int dbuser;
+    private String dbpass;
+    private String dbName = "";
+    private String dbSurname = "";
+    
+    public boolean CoLogin(int username, String password){
+        
+        boolean loginSuccessful = false;
 
         try{
-            int dbuser = 0;
-            String dbpass = "";
-            String url = "jdbc:derby://localhost:1527/Golden-Era Fitness";
+         
+            //String url = "jdbc:derby://localhost:1527/Golden-Era Fitness";
+            //Connection con = DriverManager.getConnection(url, "jake4954", "zak123");
+            
+            dbuser = 0;
+            dbpass = "";
+            
             int user = username;
             String pass = password;
-           
-            Connection con = DriverManager.getConnection(url, "jake4954", "zak123");
+            
+            Connection connection;
+            
+            ConnectionManager connectionManager = ConnectionManager.getInstance();
+            connection = connectionManager.getConnection();
 
-            Statement stmt = con.createStatement();
-            String SQL = "SELECT * FROM MEMBERS WHERE ID=" + user + " AND PASSWORD='" + pass + "'";
+            Statement stmt = connection.createStatement();
+            
+            String SQL = "SELECT * FROM MEMBERS WHERE ID=" + user 
+                    + " AND PASSWORD='" + pass + "'";
             ResultSet rs = stmt.executeQuery(SQL);
 
             while(rs.next()){
                 dbuser = Integer.parseInt(rs.getString("ID"));
-                dbpass = rs.getString("PASSWORD");
-                
+                dbpass = rs.getString("PASSWORD");  
+                dbName = rs.getString("NAME");
+                dbSurname = rs.getString("SURNAME");
             }
                    
             if(user == dbuser && (pass.equals(dbpass))){
-                     Main x = new Main();
-                     x.setVisible(true);
+                    loginSuccessful = true;
+                    
+                    UserInfoManager userInfoManager
+                            = UserInfoManager.getInstance();
+                    
+                    userInfoManager.setId(dbuser);
+                    userInfoManager.setName(dbName);
+                    userInfoManager.setSurname(dbSurname);
+                    
+                    Main x = new Main();
+                    x.setVisible(true);
             } 
             else{
-                Login x = new Login();
-                x.setVisible(true);
+                
             }
         }
         
@@ -44,7 +69,8 @@ public class Login_Check_Members {
             error.printStackTrace();
         }
        
-        
+      
+        return loginSuccessful;
     }
     
    

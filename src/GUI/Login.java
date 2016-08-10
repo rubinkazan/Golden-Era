@@ -11,18 +11,27 @@ import java.util.logging.Logger;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 
-public class Login extends javax.swing.JFrame {
-   Connection con = null;
-        ResultSet rs = null;
-        PreparedStatement pst = null;
+public class Login extends JFrame {
+    
+    ConnectionManager connectionManager = ConnectionManager.getInstance();
+    Connection con = null;
+    ResultSet rs = null;
+    PreparedStatement pst = null;
+   
         
 
     public Login() {
+        
+        Thread connectionThread = new Thread(connectionManager);
+        connectionThread.start(); // Runs concurrent connection
+        
+        setLocationRelativeTo(null);
         initComponents();
-               this.getContentPane().setBackground(Color.white);
+        this.getContentPane().setBackground(Color.white);
 
     }
 
@@ -132,9 +141,9 @@ public class Login extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addComponent(btnRegister)
-                        .addGap(43, 43, 43)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSubmit)
-                        .addGap(38, 38, 38))))
+                        .addGap(75, 75, 75))))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,10 +213,19 @@ public class Login extends javax.swing.JFrame {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         int user = Integer.parseInt(txtUser.getText());
-        String pass = txtPass.getText();
-        Login_Check_Members.CoLogin(user,pass);
-        Login_Check_Staff.CoLogin(user,pass);
-
+        String pass = new String(txtPass.getPassword());
+        
+        Login_Check_Members membersLoginCheck = new Login_Check_Members();
+        Login_Check_Staff staffLoginCheck = new Login_Check_Staff();        
+        
+        if(membersLoginCheck.CoLogin(user,pass) == true){
+            this.dispose();
+        }else if(staffLoginCheck.CoLogin(user,pass) == true){
+            this.dispose();
+        }else{
+            JOptionPane.showMessageDialog(null, "Login Unsuccessful");
+        }
+        
        // JOptionPane.showMessageDialog(rootPane, "User does not exist. Please try again or Register an account");
     }//GEN-LAST:event_btnSubmitActionPerformed
 
@@ -231,7 +249,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPassActionPerformed
 
     public static void main(String args[]) {
-
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Login().setVisible(true);

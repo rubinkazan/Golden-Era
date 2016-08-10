@@ -3,11 +3,17 @@ package GUI;
 
 import java.awt.Color;
 import java.awt.Panel;
+import javax.swing.JFrame;
 
-public class Main_Staff extends javax.swing.JFrame {
+public class Main_Staff extends JFrame {
 
     public Main_Staff() {
+        
         initComponents();
+        
+        UserInfoManager userInfoManager
+                            = UserInfoManager.getInstance();
+        welcomeLbl.setText("Welcome, " + userInfoManager.getName());
     }
 
   
@@ -17,16 +23,18 @@ public class Main_Staff extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        welcomeLbl = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         btnManage = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logomain1.png"))); // NOI18N
         jLabel1.setText(" ");
 
-        jLabel2.setText("Welcome, ");
+        welcomeLbl.setText("Welcome, ");
 
         jButton3.setText("View PT Members");
 
@@ -44,18 +52,12 @@ public class Main_Staff extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton3)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(btnManage)))))
-                .addContainerGap(22, Short.MAX_VALUE))
+                    .addComponent(btnManage)
+                    .addComponent(welcomeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -66,12 +68,12 @@ public class Main_Staff extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addComponent(jLabel2)
-                        .addGap(95, 95, 95)
-                        .addComponent(btnManage)))
-                .addGap(18, 18, 18)
-                .addComponent(jButton3)
-                .addContainerGap(292, Short.MAX_VALUE))
+                        .addComponent(welcomeLbl)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnManage, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton3)))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -89,7 +91,8 @@ public class Main_Staff extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageActionPerformed
- 
+          MembersTable membersTable = new MembersTable();
+          membersTable.setVisible(true);
     }//GEN-LAST:event_btnManageActionPerformed
 
     /**
@@ -108,8 +111,8 @@ public class Main_Staff extends javax.swing.JFrame {
     private javax.swing.JButton btnManage;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel welcomeLbl;
     // End of variables declaration//GEN-END:variables
  
 }

@@ -8,6 +8,10 @@ public class Main extends javax.swing.JFrame {
 
     public Main() {
         initComponents();
+        
+        UserInfoManager userInfoManager
+                            = UserInfoManager.getInstance();
+        welcomeLbl.setText("Welcome, " + userInfoManager.getName());
     }
 
   
@@ -20,7 +24,7 @@ public class Main extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnProgress = new javax.swing.JButton();
         btnBMI = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        welcomeLbl = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jToggleButton1 = new javax.swing.JToggleButton();
@@ -55,7 +59,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Welcome, ");
+        welcomeLbl.setText("Welcome, ");
 
         jButton2.setText("Exercises Library");
 
@@ -96,7 +100,7 @@ public class Main extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(38, 38, 38)
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(welcomeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(30, 30, 30)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,7 +125,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(btnProgress)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addComponent(jLabel2)
+                        .addComponent(welcomeLbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 179, Short.MAX_VALUE)))
                 .addComponent(btnBMI)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -194,9 +198,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JLabel welcomeLbl;
     // End of variables declaration//GEN-END:variables
  
 }

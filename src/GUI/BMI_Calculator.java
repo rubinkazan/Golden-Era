@@ -2,14 +2,18 @@
 package GUI;
 
 import java.awt.Color;
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 
 
-public class BMI_Calculator extends javax.swing.JFrame {
+public class BMI_Calculator extends JFrame {
 
 
     public BMI_Calculator() {
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        getContentPane().setBackground(Color.white);
         initComponents();
-               //this.getContentPane().setBackground(Color.white);
 
     }
 
@@ -207,18 +211,18 @@ public class BMI_Calculator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelpActionPerformed
-Help x = new Help();
-x.setVisible(true);
+        Help x = new Help();
+        x.setVisible(true);
     }//GEN-LAST:event_btnHelpActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-About x = new About();
-x.setVisible(true);
+        About x = new About();
+        x.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-      Main x = new Main();
-      x.setVisible(true);
+        Main x = new Main();
+        x.setVisible(true);
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void txtWeightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtWeightActionPerformed
@@ -230,18 +234,17 @@ x.setVisible(true);
     }//GEN-LAST:event_txtHeightActionPerformed
 
     private void btnCakcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCakcActionPerformed
-double weight = Double.parseDouble(txtWeight.getText());
-double height = (Double.parseDouble(txtHeight.getText()) / 100);
-txaDisplay.append(Export_BMI.BMI_Calc(weight,height) + "");
-
+        double weight = Double.parseDouble(txtWeight.getText());
+        double height = (Double.parseDouble(txtHeight.getText()) / 100);
+        txaDisplay.append(Export_BMI.BMI_Calc(weight,height) + "");
 
     }//GEN-LAST:event_btnCakcActionPerformed
 
     private void btnExportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportActionPerformed
-double weight = Double.parseDouble(txtWeight.getText());
-double height = (Double.parseDouble(txtHeight.getText()) / 100);
-Export_BMI.BMI_Calc(weight,height);
-//Export_BMI.ExportPDF();
+        double weight = Double.parseDouble(txtWeight.getText());
+        double height = (Double.parseDouble(txtHeight.getText()) / 100);
+        Export_BMI.BMI_Calc(weight,height);
+        //Export_BMI.ExportPDF();
     }//GEN-LAST:event_btnExportActionPerformed
 
     public static void main(String args[]) {

@@ -9,34 +9,58 @@ import java.sql.SQLException;
 
 public class Login_Check_Staff {
     
-    public static void CoLogin(int username, String password){
+    private int dbuser;
+    private String dbpass;
+    private String dbName = "";
+    private String dbSurname = "";
+    
+    public boolean CoLogin(int username, String password){
+        
+        boolean loginSuccessful = false;
 
         try{
-            int dbuser = 0;
-            String dbpass = "";
-            String url = "jdbc:derby://localhost:1527/Golden-Era Fitness";
+            
+            //String url = "jdbc:derby://localhost:1527/Golden-Era Fitness";
+            
+            dbuser = 0;
+            dbpass = "";
+           
             int user = username;
             String pass = password;
+            
+            Connection connection;
            
-            Connection con = DriverManager.getConnection(url, "jake4954", "zak123");
+            ConnectionManager connectionManager = ConnectionManager.getInstance();
+            connection = connectionManager.getConnection();
 
-            Statement stmt = con.createStatement();
-            String SQL = "SELECT * FROM STAFF WHERE ID=" + user + " AND PASSWORD='" + pass + "'";
+            Statement stmt = connection.createStatement();
+            String SQL = "SELECT * FROM STAFF WHERE ID=" + user 
+                    + " AND PASSWORD='" + pass + "'";
             ResultSet rs = stmt.executeQuery(SQL);
 
             while(rs.next()){
                 dbuser = Integer.parseInt(rs.getString("ID"));
                 dbpass = rs.getString("PASSWORD");
+                dbName = rs.getString("NAME");
+                dbSurname = rs.getString("SURNAME");
                 
             }
                    
             if(user == dbuser && (pass.equals(dbpass))){
-                     Main_Staff x = new Main_Staff();
-                     x.setVisible(true);
+                loginSuccessful = true;
+                
+                UserInfoManager userInfoManager
+                            = UserInfoManager.getInstance();
+                    
+                userInfoManager.setId(dbuser);
+                userInfoManager.setName(dbName);
+                userInfoManager.setSurname(dbSurname);
+                
+                Main_Staff x = new Main_Staff();
+                x.setVisible(true);
             } 
             else{
-                Login x = new Login();
-                x.setVisible(true);
+               
             }
         }
         
@@ -44,8 +68,8 @@ public class Login_Check_Staff {
             error.printStackTrace();
         }
        
+        return loginSuccessful;
         
     }
-    
    
 }
