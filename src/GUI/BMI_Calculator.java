@@ -212,7 +212,7 @@ x.setVisible(true);
     }//GEN-LAST:event_btnHelpActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-BMI_Calculator x = new BMI_Calculator();
+About x = new About();
 x.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
