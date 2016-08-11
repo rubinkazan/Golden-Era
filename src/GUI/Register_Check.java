@@ -13,28 +13,6 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class Register_Check {
-    /*
-    public static void CoRegister(int new_id, String sname, String fname, 
-            String dob1, String email, String password, String gender2 ){
-        try{
-            
-            ConnectionManager connectionManager 
-                    = ConnectionManager.getInstance();
-            Connection connection = connectionManager.getConnection();
-            
-            PreparedStatement preparedStatement 
-                    = connection.prepareStatement("INSERT INTO MEMBERS " + 
-                    "VALUES ("  + new_id + ", '" +  sname + "', '" + fname 
-                            + "', '"  + Date.valueOf(dob1) + "','" + email 
-                            + "','" + password +"','" + gender2 + "')");
-            preparedStatement.executeQuery();
-            
-            
-        } catch (Exception e) {
-            e.printStackTrace(); 
-        }
-}
-    */
     public static void CoRegister(int new_id, String sname, String fname, 
             String dob1, String email, String password, String gender2){
         try{
