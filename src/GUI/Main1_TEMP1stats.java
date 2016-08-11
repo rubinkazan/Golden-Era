@@ -313,6 +313,7 @@ double deadlift = Double.parseDouble(txtDeadlift.getText());
 Stat_Check.checkStat(userInfoManager.getId(), squat, bench, deadlift);
 
         
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
