@@ -2,7 +2,10 @@
 package GUI;
 
 import java.awt.Color;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
@@ -236,9 +239,34 @@ public class BMI_Calculator extends JFrame {
     }//GEN-LAST:event_txtHeightActionPerformed
 
     private void btnCakcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCakcActionPerformed
-        double weight = Double.parseDouble(txtWeight.getText());
+   double weight = Double.parseDouble(txtWeight.getText());
         double height = (Double.parseDouble(txtHeight.getText()) / 100);
         double bmi = (height * height) / weight;
+        
+                        UserInfoManager userInfoManager
+                            = UserInfoManager.getInstance();
+       
+        File textFile = new File(userInfoManager.getName() + ".txt");
+        BufferedWriter bufferedWriter = null;
+
+        try{
+
+            if(!textFile.exists()){ // Checks if the text file doesn't exist
+                FileWriter fileWriter = new FileWriter(textFile); // Creates text file
+            }
+
+            bufferedWriter = new BufferedWriter(new FileWriter(textFile, true));
+            bufferedWriter = new BufferedWriter(new FileWriter(textFile, true));
+            bufferedWriter.write(userInfoManager.getName());
+            bufferedWriter.write((int) bmi);
+               
+
+
+            bufferedWriter.close();
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
         
         
 
@@ -246,23 +274,7 @@ public class BMI_Calculator extends JFrame {
 
     private void btnExportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportActionPerformed
  
-         try {
-            PrintWriter z;
 
-            if (!filename.exists()) {
-                FileWriter fileWriter = new FileWriter(filename);
-
-            }
-            z = new PrintWriter(filename);
-            z.println("Line 1");
-            z.println("Line 2");
-            z.println("Line 3");
-
-            z.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
     }//GEN-LAST:event_btnExportActionPerformed
 

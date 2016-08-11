@@ -28,7 +28,8 @@ public class Login extends JFrame {
         
         Thread connectionThread = new Thread(connectionManager);
         connectionThread.start(); // Runs concurrent connection
-        
+            this.getContentPane().setBackground(Color.white);
+
         setLocationRelativeTo(null);
         initComponents();
         this.getContentPane().setBackground(Color.white);

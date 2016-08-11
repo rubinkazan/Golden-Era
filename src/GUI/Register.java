@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class Register extends JFrame {
-//this.getContentPane().setBackground(Color.white);
+
  
  
     int answer = 0;
@@ -13,7 +13,8 @@ public class Register extends JFrame {
     public Register() {
 
         initComponents();
-        
+            this.getContentPane().setBackground(Color.white);
+
         //Register_Check.AntiSpam(antispamField, answerField);
         setQuestion();
         
@@ -537,22 +538,29 @@ public class Register extends JFrame {
 
         //Date of Birth
         String day = txtDay.getText();
-        String month = (String) cbMonth.getSelectedItem();
+        String month = (cbMonth.getSelectedIndex() + 1) + "";
         String year = txtYear.getText();
-        String dob1 = year + month + day;
+        String dob1 = year + "-" +  month + "-" + day;
+        //19980219 yyyy-mm-dd
 
         //ID = DAY + RANDOMNUMBER(1-10) + YEAR.SUBSTRING(2,4)
         //ID = LOGIN USERNAME
         int ran = (int) (Math.random()*10);
         String id = day + ran + year.substring(2, 4);
         int new_id = Integer.parseInt(id);
-        String password = txtPass.getText();
-        String password2 = txtPass2.getText();
+        String password = new String(txtPass.getPassword());
+        String password2 = new String(txtPass2.getPassword());
 
         if(password.equals(password2)){
             if(answer == Integer.parseInt(answerField.getText())){
                 //Registration success
-                Register_Check.CoRegister(new_id, sname, fname, dob1, email, password, gender);
+                Register_Check.CoRegister(new_id, sname, fname, dob1, email, password, gender2);
+                JOptionPane.showMessageDialog(rootPane, "Please take note your Login ID is: " + new_id);
+
+                Login x = new Login();
+                x.setVisible(true);
+                this.dispose();
+                
             }else{
                 JOptionPane.showMessageDialog(rootPane, "Anti-spam failed");
             }
@@ -562,8 +570,6 @@ public class Register extends JFrame {
             txtPass.setBackground(Color.red);
             txtPass2.setBackground(Color.red);
         }
-        
-      
         //String ID = day of birth + randomnum + last 2 digits of year of birth 
 
     }//GEN-LAST:event_btnSubmitActionPerformed
