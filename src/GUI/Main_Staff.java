@@ -14,6 +14,7 @@ public class Main_Staff extends JFrame {
         UserInfoManager userInfoManager
                             = UserInfoManager.getInstance();
         welcomeLbl.setText("Welcome, " + userInfoManager.getName());
+        
     }
 
   

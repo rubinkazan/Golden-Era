@@ -2,6 +2,8 @@
 package GUI;
 
 import java.awt.Color;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
@@ -144,7 +146,7 @@ public class BMI_Calculator extends JFrame {
                 .addContainerGap())
         );
 
-        btnExport.setText("Export Results - PDF");
+        btnExport.setText("Export Results");
         btnExport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExportActionPerformed(evt);
@@ -236,17 +238,35 @@ public class BMI_Calculator extends JFrame {
     private void btnCakcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCakcActionPerformed
         double weight = Double.parseDouble(txtWeight.getText());
         double height = (Double.parseDouble(txtHeight.getText()) / 100);
-        txaDisplay.append(Export_BMI.BMI_Calc(weight,height) + "");
+        double bmi = (height * height) / weight;
+        
+        
 
     }//GEN-LAST:event_btnCakcActionPerformed
 
     private void btnExportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportActionPerformed
-        double weight = Double.parseDouble(txtWeight.getText());
-        double height = (Double.parseDouble(txtHeight.getText()) / 100);
-        Export_BMI.BMI_Calc(weight,height);
-        //Export_BMI.ExportPDF();
+ 
+         try {
+            PrintWriter z;
+
+            if (!filename.exists()) {
+                FileWriter fileWriter = new FileWriter(filename);
+
+            }
+            z = new PrintWriter(filename);
+            z.println("Line 1");
+            z.println("Line 2");
+            z.println("Line 3");
+
+            z.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }//GEN-LAST:event_btnExportActionPerformed
 
+     
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
