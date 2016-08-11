@@ -73,7 +73,10 @@ public class Register extends JFrame {
 
         jLabel1.setText("Registration Form");
 
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setForeground(new java.awt.Color(238, 238, 238));
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel3.setText("Password:");
 
@@ -137,6 +140,8 @@ public class Register extends JFrame {
                 .addGap(12, 12, 12))
         );
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+
         txtDay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDayActionPerformed(evt);
@@ -185,6 +190,8 @@ public class Register extends JFrame {
                 .addContainerGap())
         );
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
         jLabel6.setText("Full name:");
 
         txtSname.addActionListener(new java.awt.event.ActionListener() {
@@ -229,6 +236,8 @@ public class Register extends JFrame {
                     .addComponent(txtFname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         cbGender.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-Selection Option-", "Male", "Female" }));
         cbGender.addActionListener(new java.awt.event.ActionListener() {
@@ -318,6 +327,8 @@ public class Register extends JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/smallerlogo.png"))); // NOI18N
 
         lblAntisp.setText("Answer:");
+
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
         btnReturn.setText("Return to Login Page");
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
