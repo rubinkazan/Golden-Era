@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class Register extends JFrame {
-
+//TODO - ADD USERS TO PTMEMBERS IF THEY SELECT ACTIVITY LEVEL AND THAT THEY WANT A PERSONTA TRAINER
  
  
     int answer = 0;
@@ -539,7 +539,7 @@ public class Register extends JFrame {
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-         
+
         //Fetch basic user info from registration form.
         //press submit - given an ID number
         

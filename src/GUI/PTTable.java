@@ -9,10 +9,6 @@ import javax.swing.WindowConstants;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
-/**
- *
- * @author rubinkazan
- */
 public class PTTable extends JFrame {
 
     private DefaultTableModel dataModel;
@@ -261,7 +257,7 @@ public class PTTable extends JFrame {
             connection = ConnectionManager.getInstance().getConnection();
 
             PreparedStatement preparedStatement 
-                    = connection.prepareStatement("SELECT * FROM Members");
+                    = connection.prepareStatement("SELECT * FROM PTMEMBERS");
 
             ResultSet resultSet = preparedStatement.executeQuery();
 

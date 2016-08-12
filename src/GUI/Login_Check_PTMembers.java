@@ -7,7 +7,7 @@ import java.sql.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Login_Check_Members {
+public class Login_Check_PTMembers {
     
     private int dbuser;
     private String dbpass;
@@ -35,7 +35,7 @@ public class Login_Check_Members {
 
             Statement stmt = connection.createStatement();
             
-            String SQL = "SELECT * FROM MEMBERS WHERE ID=" + user 
+            String SQL = "SELECT * FROM PTMembers WHERE ID=" + user 
                     + " AND PASSWORD='" + pass + "'";
             ResultSet rs = stmt.executeQuery(SQL);
 
