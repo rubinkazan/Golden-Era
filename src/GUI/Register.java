@@ -372,6 +372,8 @@ public class Register extends JFrame {
 
         jLabel5.setText("Anti Spam Check:");
 
+        pnlBMI.setBackground(new java.awt.Color(255, 255, 255));
+
         sliderBMI.setMinimum(20);
         sliderBMI.setMinorTickSpacing(40);
         sliderBMI.setPaintLabels(true);
@@ -392,18 +394,19 @@ public class Register extends JFrame {
         pnlBMILayout.setHorizontalGroup(
             pnlBMILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlBMILayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnlBMILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlBMILayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(pnlBMILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnlBMILayout.createSequentialGroup()
                         .addComponent(jLabel15)
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel14)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel14)
+                        .addGap(18, 18, 18)
                         .addComponent(jLabel13))
                     .addGroup(pnlBMILayout.createSequentialGroup()
                         .addComponent(lblActLvl)
-                        .addGap(41, 41, 41)
-                        .addComponent(sliderBMI, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(sliderBMI, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23)))
                 .addContainerGap())
         );
         pnlBMILayout.setVerticalGroup(
@@ -574,11 +577,12 @@ public class Register extends JFrame {
                 
             }else{
                 JOptionPane.showMessageDialog(rootPane, "Anti-spam failed");
+                setQuestion();
             }
         }
         else{
             JOptionPane.showMessageDialog(rootPane, "Password does not match");
-            txtPass.setBackground(Color.red);
+            //txtPass.setBackground(Color.red);
             txtPass2.setBackground(Color.red);
         }
         //String ID = day of birth + randomnum + last 2 digits of year of birth 
@@ -607,13 +611,11 @@ public class Register extends JFrame {
         }
     }//GEN-LAST:event_chbNoActionPerformed
     
-    private void setQuestion(){
-        
+    private void setQuestion(){    
         int ran1 = (int) (Math.random()*10);
         int ran2 = (int) (Math.random()*10);
         int sum = ran1 + ran2;
-        answer = sum;
-        
+        answer = sum;  
         antispamField.setText("What is " + ran1 + " + " + ran2 + " = ?");
     
     }

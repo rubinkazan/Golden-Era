@@ -312,6 +312,8 @@ double deadlift = Double.parseDouble(txtDeadlift.getText());
                             = UserInfoManager.getInstance();
 Stat_Check.checkStat(userInfoManager.getId(), squat, bench, deadlift);
 
+//array
+am[count]
         
 
     }//GEN-LAST:event_jButton2ActionPerformed

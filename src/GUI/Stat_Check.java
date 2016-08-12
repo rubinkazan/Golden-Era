@@ -4,6 +4,7 @@ package GUI;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 
 public class Stat_Check {
@@ -28,4 +29,33 @@ public class Stat_Check {
                     error.printStackTrace();
                 }
     }
+     
+     public int[] getCount(int id, int squat, int bench, int deadlift) throws SQLException{
+                    ConnectionManager connectionManager = ConnectionManager.getInstance();
+                    Connection connection = connectionManager.getConnection();
+                    Statement stmt = connection.createStatement();
+                    
+                    String sql = "SELECT \"SQUAT\", \"BENCH\", \"DEADLIFT\" FROM \"STATS\"";
+         return null;
+                    
+                                   
+                    
+         
+         
+         
+         
+     }
+     
+     
+     
+
+             
+     
+     
+     
+     
+     
+     
+     
+     
 }
