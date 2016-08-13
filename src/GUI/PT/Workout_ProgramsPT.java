@@ -77,7 +77,7 @@ public class Workout_ProgramsPT extends javax.swing.JFrame {
             }
         });
 
-        linkField.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        linkField.setFont(new java.awt.Font("Heiti TC", 0, 24)); // NOI18N
         linkField.setText("Find a Plan tailored for");
 
         btnMain.setText("Return to Main Menu");
