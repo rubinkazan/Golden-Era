@@ -22,7 +22,7 @@ import java.text.DecimalFormat;
 
 public class GraphItem {
 
-public class GraphItem extends ApplicationFrame{
+public class GraphItem extends JPanel implements PanelModel{
 
     private String chartTitle;
     private DefaultCategoryDataset dataset;
