@@ -1,6 +1,10 @@
 
 package GUI;
 
+import GUI.USR.Register;
+import GUI.PT.RegisterPT;
+import GUI.USR.Help;
+import GUI.USR.About;
 import java.awt.Color;
 import java.sql.Connection;
 import java.sql.DriverManager;

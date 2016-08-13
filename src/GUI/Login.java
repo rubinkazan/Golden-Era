@@ -1,6 +1,11 @@
 
 package GUI;
 
+import GUI.STAFF.Login_Check_Staff;
+import GUI.PT.Login_Check_PTMembers;
+import GUI.USR.Login_Check_Members;
+import GUI.USR.Help;
+import GUI.USR.About;
 import java.awt.Color;
 import java.sql.Connection;
 import java.sql.DriverManager;
