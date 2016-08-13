@@ -3,9 +3,9 @@ Fitness Application
 https://rubinkazan.github.io/Golden-Era/
 
 ##Screenshots:
-#Main_Menu
+#Main Menu
+![Screenshot](src/Images/MainScreen.png)
 
-#BMI_Calculator
+#BMI Calculator
 ![Screenshot](src/Images/BMIscreen.png)
 
-![Screenshot](src/Images/MainScreen.png)
