@@ -22,9 +22,6 @@ public class Login_Check_PTMembers {
         boolean loginSuccessful = false;
 
         try{
-         
-            //String url = "jdbc:derby://localhost:1527/Golden-Era Fitness";
-            //Connection con = DriverManager.getConnection(url, "jake4954", "zak123");
             dbuser = 0;
             dbpass = "";
             

@@ -9,7 +9,7 @@ import java.sql.Statement;
 
 public class Stat_Check {
     
-     public static void checkStat(int id, double squat, double benchPress, double deadLift, double weight){
+     public static void checkStat(int id, double squat, double benchPress, double deadLift, double weight, String dob){
         try{
                     ConnectionManager connectionManager = ConnectionManager.getInstance();
                     Connection connection = connectionManager.getConnection();
@@ -19,7 +19,8 @@ public class Stat_Check {
                             + "VALUES(" + id + ", " 
                             + squat + ", " + benchPress + ", "
                             + deadLift + ", "
-                            + weight
+                            + weight + ", '"
+                            + dob + "'"
                             + ")");
                     
                     preparedStatement.executeUpdate();

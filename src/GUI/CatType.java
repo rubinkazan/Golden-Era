@@ -1,0 +1,8 @@
+
+package GUI;
+
+//BASIC ENUM CLASS FOR DATATYPES FOR GRAPH SWITCHC AASE
+public enum CatType {
+    INT, DOUBLE, TIME
+    
+}
