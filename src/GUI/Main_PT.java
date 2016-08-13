@@ -194,7 +194,7 @@ public class Main_PT extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        Main1_TEMP1stats x = new Main1_TEMP1stats();
+        Progress x = new Progress();
         x.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed

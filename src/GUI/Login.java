@@ -217,21 +217,27 @@ public class Login extends JFrame {
         String pass = new String(txtPass.getPassword());
         
         Login_Check_Members membersLoginCheck = new Login_Check_Members();
+        Login_Check_PTMembers ptmembersLoginCheck = new Login_Check_PTMembers();
         Login_Check_Staff staffLoginCheck = new Login_Check_Staff();        
         
         if(membersLoginCheck.CoLogin(user,pass) == true){
             this.dispose();
         }else if(staffLoginCheck.CoLogin(user,pass) == true){
             this.dispose();
-        }else{
+        }else if(ptmembersLoginCheck.CoLogin(user,pass) == true){
+            this.dispose();
+            
+        }
+        else{
             JOptionPane.showMessageDialog(null, "Login Unsuccessful");
+            System.out.println("Somethings Wrong; Most Likely user exists in neither DB");
         }
         
        // JOptionPane.showMessageDialog(rootPane, "User does not exist. Please try again or Register an account");
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-      Register x = new Register();
+      quickreg x = new quickreg();
       x.setVisible(true);
     }//GEN-LAST:event_btnRegisterActionPerformed
 

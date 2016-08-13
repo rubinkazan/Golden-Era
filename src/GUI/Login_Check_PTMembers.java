@@ -35,7 +35,7 @@ public class Login_Check_PTMembers {
 
             Statement stmt = connection.createStatement();
             
-            String SQL = "SELECT * FROM PTMembers WHERE ID=" + user 
+            String SQL = "SELECT * FROM PTMEMBERS WHERE ID=" + user 
                     + " AND PASSWORD='" + pass + "'";
             ResultSet rs = stmt.executeQuery(SQL);
 
@@ -56,7 +56,7 @@ public class Login_Check_PTMembers {
                     userInfoManager.setName(dbName);
                     userInfoManager.setSurname(dbSurname);
                     
-                    Main x = new Main();
+                    Main_PT x = new Main_PT();
                     x.setVisible(true);
             } 
             else{

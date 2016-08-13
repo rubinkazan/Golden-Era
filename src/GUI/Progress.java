@@ -9,10 +9,10 @@ import java.awt.event.ActionListener;
 import javax.swing.Timer;
 import javax.swing.WindowConstants;
 
-public class Main1_TEMP1stats extends javax.swing.JFrame {
+public class Progress extends javax.swing.JFrame {
 //fetch id from Members === id from stats
     
-    public Main1_TEMP1stats() {
+    public Progress() {
         initComponents();
                 setLocationRelativeTo(null);
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -45,6 +45,8 @@ public class Main1_TEMP1stats extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         txtBench = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        txtWeight = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
 
         btnHelp.setText("Help (?)");
@@ -181,6 +183,8 @@ public class Main1_TEMP1stats extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jLabel6.setText("Weight");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -192,6 +196,12 @@ public class Main1_TEMP1stats extends javax.swing.JFrame {
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel6)
+                .addGap(131, 131, 131)
+                .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,7 +212,10 @@ public class Main1_TEMP1stats extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtWeight, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         jButton3.setText("Return to Main Menu");
@@ -234,7 +247,7 @@ public class Main1_TEMP1stats extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(46, 46, 46)
                                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 43, Short.MAX_VALUE)))
+                        .addGap(0, 76, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -328,7 +341,7 @@ Stat_Check.checkStat(userInfoManager.getId(), squat, bench, deadlift);
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Main1_TEMP1stats().setVisible(true);
+                new Progress().setVisible(true);
             }
         });
     }
@@ -344,6 +357,7 @@ Stat_Check.checkStat(userInfoManager.getId(), squat, bench, deadlift);
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -352,6 +366,7 @@ Stat_Check.checkStat(userInfoManager.getId(), squat, bench, deadlift);
     private javax.swing.JTextField txtBench;
     private javax.swing.JTextField txtDeadlift;
     private javax.swing.JTextField txtSquat;
+    private javax.swing.JTextField txtWeight;
     private javax.swing.JLabel welcomeLbl;
     // End of variables declaration//GEN-END:variables
  
