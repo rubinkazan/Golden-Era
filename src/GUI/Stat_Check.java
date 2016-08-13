@@ -9,7 +9,7 @@ import java.sql.Statement;
 
 public class Stat_Check {
     
-     public static void checkStat(int id, double squat, double benchPress, double deadLift){
+     public static void checkStat(int id, double squat, double benchPress, double deadLift, double weight){
         try{
                     ConnectionManager connectionManager = ConnectionManager.getInstance();
                     Connection connection = connectionManager.getConnection();
@@ -18,7 +18,8 @@ public class Stat_Check {
                     connection.prepareStatement("INSERT INTO STATS "
                             + "VALUES(" + id + ", " 
                             + squat + ", " + benchPress + ", "
-                            + deadLift
+                            + deadLift + ", "
+                            + weight
                             + ")");
                     
                     preparedStatement.executeUpdate();
@@ -30,12 +31,12 @@ public class Stat_Check {
                 }
     }
      
-     public int[] getCount(int id, int squat, int bench, int deadlift) throws SQLException{
+     public double[] getCount(double id, double squat, double bench, double deadlift, double weight) throws SQLException{
                     ConnectionManager connectionManager = ConnectionManager.getInstance();
                     Connection connection = connectionManager.getConnection();
                     Statement stmt = connection.createStatement();
                     
-                    String sql = "SELECT \"SQUAT\", \"BENCH\", \"DEADLIFT\" FROM \"STATS\"";
+                    String sql = "SELECT \"SQUAT\", \"BENCH\", \"DEADLIFT\" FROM \"STATS\"" //where id == getid();
          return null;
                     
                                    

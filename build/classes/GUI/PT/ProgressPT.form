@@ -67,7 +67,7 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="110" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="112" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -147,6 +147,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnHelp1">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Heiti SC" size="13" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Help (?)"/>
           </Properties>
           <Events>
@@ -155,6 +158,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Heiti SC" size="13" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="About - Golden Era Fitness"/>
           </Properties>
           <Events>
@@ -163,6 +169,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Heiti SC" size="13" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Submit"/>
           </Properties>
           <Events>
@@ -251,6 +260,9 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel5">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Heiti SC" size="13" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Deadlift"/>
                   </Properties>
                 </Component>
@@ -301,6 +313,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel4">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Heiti SC" size="13" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Squat"/>
                   </Properties>
                 </Component>
@@ -341,6 +356,9 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel2">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Heiti SC" size="13" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Bench Press"/>
                   </Properties>
                 </Component>
@@ -353,6 +371,9 @@
             </Container>
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Heiti SC" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Weight"/>
               </Properties>
             </Component>
@@ -362,6 +383,9 @@
         </Container>
         <Component class="javax.swing.JButton" name="jButton3">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Heiti SC" size="13" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Return to Main Menu"/>
           </Properties>
           <Events>
@@ -373,7 +397,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Heiti SC" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Progress Update"/>
+            <Property name="text" type="java.lang.String" value="Progress Update Log"/>
           </Properties>
         </Component>
       </SubComponents>

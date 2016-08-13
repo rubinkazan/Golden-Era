@@ -130,6 +130,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnHelp">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Heiti SC" size="13" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Help (?)"/>
       </Properties>
       <Events>
@@ -138,6 +141,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Heiti SC" size="13" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="About - Golden Era Fitness"/>
       </Properties>
       <Events>
@@ -161,6 +167,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnReturn">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Heiti SC" size="13" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Return to Main Menu"/>
       </Properties>
       <Events>
@@ -169,6 +178,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Heiti SC" size="13" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Body Mass Index Calculator"/>
       </Properties>
     </Component>
@@ -209,7 +221,7 @@
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtWeight" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="19" max="32767" attributes="0"/>
+                  <EmptySpace pref="20" max="32767" attributes="0"/>
                   <Component id="btnCakc" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -219,6 +231,9 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Heiti SC" size="13" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Height (cm) :"/>
           </Properties>
         </Component>
@@ -234,11 +249,17 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Heiti SC" size="13" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Weight (kg) :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnCakc">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Heiti SC" size="13" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Calculate"/>
           </Properties>
           <Events>
@@ -249,6 +270,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnExport">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Heiti SC" size="13" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Export Results"/>
       </Properties>
       <Events>

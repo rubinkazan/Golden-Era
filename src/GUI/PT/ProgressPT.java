@@ -4,7 +4,7 @@ package GUI.PT;
 import GUI.*;
 import GUI.USR.Main;
 import GUI.USR.Help;
-import GUI.PT.BMI_Calculator;
+import GUI.PT.BMI_CalculatorPT1;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Panel;
@@ -73,6 +73,7 @@ public class ProgressPT extends javax.swing.JFrame {
         welcomeLbl.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         welcomeLbl.setText("Logged in as, ");
 
+        btnHelp1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnHelp1.setText("Help (?)");
         btnHelp1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +81,7 @@ public class ProgressPT extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton1.setText("About - Golden Era Fitness");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +89,7 @@ public class ProgressPT extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton2.setText("Submit");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,6 +101,7 @@ public class ProgressPT extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel5.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel5.setText("Deadlift");
 
         txtDeadlift.addActionListener(new java.awt.event.ActionListener() {
@@ -135,6 +139,7 @@ public class ProgressPT extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel4.setText("Squat");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -160,6 +165,7 @@ public class ProgressPT extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel2.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel2.setText("Bench Press");
 
         txtBench.addActionListener(new java.awt.event.ActionListener() {
@@ -189,6 +195,7 @@ public class ProgressPT extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jLabel6.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel6.setText("Weight");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -224,6 +231,7 @@ public class ProgressPT extends javax.swing.JFrame {
                     .addComponent(txtWeight, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
+        jButton3.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton3.setText("Return to Main Menu");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -232,7 +240,7 @@ public class ProgressPT extends javax.swing.JFrame {
         });
 
         jLabel7.setFont(new java.awt.Font("Heiti SC", 0, 18)); // NOI18N
-        jLabel7.setText("Progress Update");
+        jLabel7.setText("Progress Update Log");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -247,7 +255,7 @@ public class ProgressPT extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 110, Short.MAX_VALUE))
+                                .addGap(0, 112, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -310,7 +318,7 @@ public class ProgressPT extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHelpActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        BMI_Calculator x = new BMI_Calculator();
+        BMI_CalculatorPT1 x = new BMI_CalculatorPT1();
         x.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 

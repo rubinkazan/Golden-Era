@@ -62,6 +62,7 @@ public class MembersTable extends JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        membersTable.setFont(new java.awt.Font("Heiti SC", 0, 10)); // NOI18N
         membersTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -72,6 +73,7 @@ public class MembersTable extends JFrame {
         ));
         jScrollPane1.setViewportView(membersTable);
 
+        jLabel1.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         jLabel1.setText("ID");
 
         idField.addActionListener(new java.awt.event.ActionListener() {
@@ -80,16 +82,22 @@ public class MembersTable extends JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         jLabel2.setText("Name");
 
+        jLabel3.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         jLabel3.setText("Surname");
 
+        jLabel4.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         jLabel4.setText("Email");
 
+        jLabel5.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         jLabel5.setText("DOB");
 
+        jLabel6.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         jLabel6.setText("Gender");
 
+        btnInsert.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         btnInsert.setText("Insert");
         btnInsert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,6 +105,7 @@ public class MembersTable extends JFrame {
             }
         });
 
+        btnDelete.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +113,7 @@ public class MembersTable extends JFrame {
             }
         });
 
+        btnSearch.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         btnSearch.setText("Search");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,6 +121,7 @@ public class MembersTable extends JFrame {
             }
         });
 
+        btnUpdate.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,8 +129,10 @@ public class MembersTable extends JFrame {
             }
         });
 
+        jLabel7.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         jLabel7.setText("Password");
 
+        selectBtn.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         selectBtn.setText("Select");
         selectBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,6 +140,7 @@ public class MembersTable extends JFrame {
             }
         });
 
+        btnMain.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         btnMain.setText("Return to Main Menu");
         btnMain.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,7 +182,7 @@ public class MembersTable extends JFrame {
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(btnUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(btnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                                .addContainerGap(51, Short.MAX_VALUE))
+                                .addContainerGap(55, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2)
@@ -182,7 +196,7 @@ public class MembersTable extends JFrame {
                                             .addComponent(nameField, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                                             .addComponent(surnameField)
                                             .addComponent(idField))
-                                        .addContainerGap(33, Short.MAX_VALUE))
+                                        .addContainerGap(36, Short.MAX_VALUE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)

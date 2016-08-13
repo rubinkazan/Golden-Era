@@ -1,6 +1,8 @@
 
 package GUI.PT;
 
+import GUI.USR.*;
+import GUI.PT.*;
 import GUI.USR.About;
 import GUI.USR.Help;
 import GUI.USR.Main;
@@ -15,10 +17,10 @@ import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
 
-public class BMI_Calculator extends JFrame {
+public class BMI_CalculatorPT1 extends JFrame {
 
 
-    public BMI_Calculator() {
+    public BMI_CalculatorPT1() {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setBackground(Color.white);
@@ -69,6 +71,7 @@ public class BMI_Calculator extends JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        btnHelp.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnHelp.setText("Help (?)");
         btnHelp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,6 +79,7 @@ public class BMI_Calculator extends JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton1.setText("About - Golden Era Fitness");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +91,7 @@ public class BMI_Calculator extends JFrame {
         txaDisplay.setRows(5);
         jScrollPane1.setViewportView(txaDisplay);
 
+        btnReturn.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnReturn.setText("Return to Main Menu");
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,8 +99,12 @@ public class BMI_Calculator extends JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel2.setText("Body Mass Index Calculator");
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel3.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel3.setText("Height (cm) :");
 
         txtHeight.addActionListener(new java.awt.event.ActionListener() {
@@ -110,8 +119,10 @@ public class BMI_Calculator extends JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel4.setText("Weight (kg) :");
 
+        btnCakc.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnCakc.setText("Calculate");
         btnCakc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,11 +159,12 @@ public class BMI_Calculator extends JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addComponent(btnCakc)
                 .addContainerGap())
         );
 
+        btnExport.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnExport.setText("Export Results");
         btnExport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,7 +242,7 @@ public class BMI_Calculator extends JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-        Main x = new Main();
+        Main_PT x = new Main_PT();
         x.setVisible(true);
     }//GEN-LAST:event_btnReturnActionPerformed
 
@@ -243,7 +255,7 @@ public class BMI_Calculator extends JFrame {
     }//GEN-LAST:event_txtHeightActionPerformed
 
     private void btnCakcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCakcActionPerformed
-   double weight = Double.parseDouble(txtWeight.getText());
+        double weight = Double.parseDouble(txtWeight.getText());
         double height = (Double.parseDouble(txtHeight.getText()) / 100);
         double bmi = (height * height) / weight;
         
@@ -251,22 +263,14 @@ public class BMI_Calculator extends JFrame {
                             = UserInfoManager.getInstance();
        
         File textFile = new File(userInfoManager.getName() + ".txt");
-        BufferedWriter bufferedWriter = null;
-
+        
         try{
-
-            if(!textFile.exists()){ // Checks if the text file doesn't exist
-                FileWriter fileWriter = new FileWriter(textFile); // Creates text file
-            }
-
-            bufferedWriter = new BufferedWriter(new FileWriter(textFile, true));
-            bufferedWriter = new BufferedWriter(new FileWriter(textFile, true));
-            bufferedWriter.write(userInfoManager.getName());
-            bufferedWriter.write((int) bmi);
-               
-
-
-            bufferedWriter.close();
+                    PrintWriter x = new PrintWriter(new FileWriter(textFile));
+                    x.println(userInfoManager.getName() + " " + userInfoManager.getSurname());
+                    x.println("Height(m): " + height);
+                    x.println("Weight(km): " + weight);
+                    x.println("BMI: " + bmi);
+                    x.close();
 
         }catch (IOException e){
             e.printStackTrace();
@@ -287,7 +291,7 @@ public class BMI_Calculator extends JFrame {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BMI_Calculator().setVisible(true);
+                new BMI_CalculatorPT1().setVisible(true);
             }
         });
     }

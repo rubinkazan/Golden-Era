@@ -70,6 +70,7 @@ public class Exercises_Library extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logomain1.png"))); // NOI18N
         jLabel1.setText(" ");
 
+        btnHelp1.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         btnHelp1.setText("Help (?)");
         btnHelp1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +78,7 @@ public class Exercises_Library extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         jButton2.setText("Return to Main Menu");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,11 +86,12 @@ public class Exercises_Library extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Heiti SC", 0, 18)); // NOI18N
         jLabel3.setText("Exercises Library");
 
         jPanel2.setLayout(new javax.swing.OverlayLayout(jPanel2));
 
+        jButton1.setFont(new java.awt.Font("Heiti SC", 0, 12)); // NOI18N
         jButton1.setText("About - Golden Era Fitness");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,7 +143,7 @@ public class Exercises_Library extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(54, 54, 54)
                         .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                         .addComponent(linkField, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(59, 59, 59)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

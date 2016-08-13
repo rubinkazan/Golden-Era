@@ -57,6 +57,7 @@ public class Main_PT extends javax.swing.JFrame {
         welcomeLbl.setFont(new java.awt.Font("Heiti TC", 0, 13)); // NOI18N
         welcomeLbl.setText("Welcome, ");
 
+        btnHelp1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnHelp1.setText("Help (?)");
         btnHelp1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,6 +65,7 @@ public class Main_PT extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton1.setText("About - Golden Era Fitness");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,6 +78,7 @@ public class Main_PT extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
+        jButton2.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton2.setText("Exercises Library");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +86,7 @@ public class Main_PT extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton5.setText("View Progress");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,6 +94,7 @@ public class Main_PT extends javax.swing.JFrame {
             }
         });
 
+        btnBMI.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnBMI.setText("BMI Calculator");
         btnBMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,6 +102,7 @@ public class Main_PT extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton3.setText("Workout Programs");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,7 +164,7 @@ public class Main_PT extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(welcomeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 134, Short.MAX_VALUE))
+                        .addGap(0, 140, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -200,7 +206,7 @@ public class Main_PT extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBMIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBMIActionPerformed
-        BMI_Calculator x = new BMI_Calculator();
+        BMI_CalculatorPT1 x = new BMI_CalculatorPT1();
         x.setVisible(true);
     }//GEN-LAST:event_btnBMIActionPerformed
 
@@ -215,7 +221,7 @@ public class Main_PT extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHelp1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        BMI_Calculator x = new BMI_Calculator();
+        BMI_CalculatorPT1 x = new BMI_CalculatorPT1();
         x.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -231,7 +237,7 @@ public class Main_PT extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        Progress x = new Progress();
+        ProgressPT x = new ProgressPT();
         x.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed

@@ -78,6 +78,7 @@ public class PTTable extends JFrame {
         ));
         jScrollPane1.setViewportView(ptTable);
 
+        btnMain.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnMain.setText("Return to Main Menu");
         btnMain.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,6 +86,7 @@ public class PTTable extends JFrame {
             }
         });
 
+        btnUpdate.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,6 +94,7 @@ public class PTTable extends JFrame {
             }
         });
 
+        selectBtn.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         selectBtn.setText("Select");
         selectBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,6 +102,7 @@ public class PTTable extends JFrame {
             }
         });
 
+        btnSearch.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnSearch.setText("Search");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,6 +110,7 @@ public class PTTable extends JFrame {
             }
         });
 
+        btnDelete.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,6 +118,7 @@ public class PTTable extends JFrame {
             }
         });
 
+        btnInsert.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnInsert.setText("Insert");
         btnInsert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,16 +162,22 @@ public class PTTable extends JFrame {
                 .addContainerGap())
         );
 
+        jLabel7.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel7.setText("Password");
 
+        jLabel3.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel3.setText("Surname");
 
+        jLabel8.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel8.setText("Height");
 
+        jLabel6.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel6.setText("Gender");
 
+        jLabel1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel1.setText("ID");
 
+        jLabel2.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel2.setText("Name");
 
         idField.addActionListener(new java.awt.event.ActionListener() {
@@ -174,10 +186,13 @@ public class PTTable extends JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel4.setText("Email");
 
+        jLabel9.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel9.setText("Weight");
 
+        jLabel5.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel5.setText("DOB");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);

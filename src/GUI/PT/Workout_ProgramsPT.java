@@ -3,7 +3,7 @@ package GUI.PT;
 
 import GUI.USR.Help;
 import GUI.*;
-import GUI.PT.BMI_Calculator;
+import GUI.PT.BMI_CalculatorPT1;
 import java.awt.Color;
 import java.awt.Desktop;
 import java.awt.Dimension;
@@ -147,7 +147,7 @@ public class Workout_ProgramsPT extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHelp1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        BMI_Calculator x = new BMI_Calculator();
+        BMI_CalculatorPT1 x = new BMI_CalculatorPT1();
         x.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 

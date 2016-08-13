@@ -76,6 +76,7 @@ public class RegisterPT extends JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel1.setText("Registration Form");
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
@@ -83,10 +84,13 @@ public class RegisterPT extends JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel3.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel3.setText("Password:");
 
+        jLabel12.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel12.setText("Email:");
 
+        jLabel7.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel7.setText("Confirm Password:");
 
         txtPass.addActionListener(new java.awt.event.ActionListener() {
@@ -153,6 +157,7 @@ public class RegisterPT extends JFrame {
             }
         });
 
+        jLabel9.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel9.setText("Date of Birth:");
 
         txtYear.addActionListener(new java.awt.event.ActionListener() {
@@ -161,6 +166,7 @@ public class RegisterPT extends JFrame {
             }
         });
 
+        cbMonth.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         cbMonth.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-Select Option-", "January\t", "February\t", "March\t", "April\t", "May\t", "June\t", "July\t", "August\t", "September\t", "October\t", "November\t", "December" }));
         cbMonth.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,6 +203,7 @@ public class RegisterPT extends JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel6.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel6.setText("Full name:");
 
         txtSname.addActionListener(new java.awt.event.ActionListener() {
@@ -244,6 +251,7 @@ public class RegisterPT extends JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
+        cbGender.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         cbGender.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-Selection Option-", "Male", "Female" }));
         cbGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -251,6 +259,7 @@ public class RegisterPT extends JFrame {
             }
         });
 
+        jLabel8.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel8.setText("Gender: ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -305,6 +314,7 @@ public class RegisterPT extends JFrame {
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
+        btnReturn.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnReturn.setText("Return to Login Page");
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -312,6 +322,7 @@ public class RegisterPT extends JFrame {
             }
         });
 
+        btnSubmit.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -319,6 +330,7 @@ public class RegisterPT extends JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton1.setText("Help (?)");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -349,8 +361,10 @@ public class RegisterPT extends JFrame {
 
         antispamField.setEditable(false);
 
+        jLabel5.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel5.setText("Anti Spam Check:");
 
+        lblAntisp.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         lblAntisp.setText("Answer:");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -386,8 +400,10 @@ public class RegisterPT extends JFrame {
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel16.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel16.setText("Weight (cm):");
 
+        jLabel11.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel11.setText("Height (cm) :");
 
         txtHeight.addActionListener(new java.awt.event.ActionListener() {
@@ -442,12 +458,16 @@ public class RegisterPT extends JFrame {
         sliderBMI.setSnapToTicks(true);
         sliderBMI.setValue(60);
 
+        jLabel13.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel13.setText("Highly Active");
 
+        jLabel15.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel15.setText("Rarely Active");
 
+        jLabel14.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel14.setText("Mildly Active");
 
+        lblActLvl.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         lblActLvl.setText("Activity Level:");
 
         javax.swing.GroupLayout pnlBMILayout = new javax.swing.GroupLayout(pnlBMI);
@@ -523,7 +543,7 @@ public class RegisterPT extends JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(168, 168, 168)
                                 .addComponent(jLabel2)
-                                .addContainerGap(391, Short.MAX_VALUE))
+                                .addContainerGap(404, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel1)
@@ -566,9 +586,7 @@ public class RegisterPT extends JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addComponent(lblAntiSpam, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(panelPT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(panelPT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21)

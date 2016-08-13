@@ -65,6 +65,7 @@ public class Login extends JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel3.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel3.setText("Password:");
 
         txtUser.addActionListener(new java.awt.event.ActionListener() {
@@ -73,8 +74,10 @@ public class Login extends JFrame {
             }
         });
 
+        jLabel13.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel13.setText("Username:");
 
+        jLabel2.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel2.setText("Login");
 
         txtPass.addActionListener(new java.awt.event.ActionListener() {
@@ -119,6 +122,7 @@ public class Login extends JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/smallerlogo.png"))); // NOI18N
 
+        btnSubmit.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +130,7 @@ public class Login extends JFrame {
             }
         });
 
+        btnRegister.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnRegister.setText("Register");
         btnRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,6 +171,7 @@ public class Login extends JFrame {
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
+        btnHelp.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnHelp.setText("Help (?)");
         btnHelp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,6 +179,7 @@ public class Login extends JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton1.setText("About - Golden Era Fitness");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,7 +194,7 @@ public class Login extends JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 213, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 219, Short.MAX_VALUE)
                 .addComponent(btnHelp)
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

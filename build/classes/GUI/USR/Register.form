@@ -51,7 +51,7 @@
                               <Component id="lblAntiSpam" min="-2" pref="170" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="27" max="32767" attributes="0"/>
+                              <EmptySpace pref="28" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -93,6 +93,9 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Heiti SC" size="13" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Registration Form"/>
       </Properties>
     </Component>
@@ -196,16 +199,25 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Heiti SC" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Password:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel12">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Heiti SC" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Email:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Heiti SC" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Confirm Password:"/>
               </Properties>
             </Component>
@@ -272,6 +284,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Heiti SC" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Date of Birth:"/>
               </Properties>
             </Component>
@@ -282,6 +297,9 @@
             </Component>
             <Component class="javax.swing.JComboBox" name="cbMonth">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Heiti SC" size="13" style="0"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="13">
                     <StringItem index="0" value="-Select Option-"/>
@@ -355,6 +373,9 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Heiti SC" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Full name:"/>
               </Properties>
             </Component>
@@ -405,6 +426,9 @@
           <SubComponents>
             <Component class="javax.swing.JComboBox" name="cbGender">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Heiti SC" size="13" style="0"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="3">
                     <StringItem index="0" value="-Selection Option-"/>
@@ -419,6 +443,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Heiti SC" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Gender: "/>
               </Properties>
             </Component>
@@ -475,6 +502,9 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="btnReturn">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Heiti SC" size="13" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Return to Login Page"/>
           </Properties>
           <Events>
@@ -483,6 +513,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnSubmit">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Heiti SC" size="13" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Submit"/>
           </Properties>
           <Events>
@@ -491,6 +524,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Heiti SC" size="13" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Help (?)"/>
           </Properties>
         </Component>
@@ -549,11 +585,17 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Heiti SC" size="13" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Anti Spam Check:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblAntisp">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Heiti SC" size="13" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Answer:"/>
           </Properties>
         </Component>
