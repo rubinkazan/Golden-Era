@@ -6,6 +6,6 @@ https://rubinkazan.github.io/Golden-Era/
 #Main_Menu
 
 #BMI_Calculator
-![Screenshot](Images/BMIscreen.png)
+![Screenshot](src/Images/BMIscreen.png)
 
-![Screenshot](Images/MainScreen.png)
+![Screenshot](src/Images/MainScreen.png)
