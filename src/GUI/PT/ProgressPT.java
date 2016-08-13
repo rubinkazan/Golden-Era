@@ -344,9 +344,10 @@ public class ProgressPT extends javax.swing.JFrame {
 double bench = Double.parseDouble(txtBench.getText());
 double squat = Double.parseDouble(txtSquat.getText());
 double deadlift = Double.parseDouble(txtDeadlift.getText());
-        UserInfoManager userInfoManager
+double weight = Double.parseDouble(txtWeight.getText());
+    UserInfoManager userInfoManager
                             = UserInfoManager.getInstance();
-Stat_Check.checkStat(userInfoManager.getId(), squat, bench, deadlift);
+Stat_Check.checkStat(userInfoManager.getId(), squat, bench, deadlift, weight);
 
         
 

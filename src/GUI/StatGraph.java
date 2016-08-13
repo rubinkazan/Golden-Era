@@ -5,7 +5,7 @@ import java.awt.Dimension;
 import javax.swing.JPanel;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-
+/*
 public class StatGraph extends ApplicationFrame {
       public StatGraph(String x)
   {
@@ -33,3 +33,4 @@ public class StatGraph extends ApplicationFrame {
       
     
 }
+*/

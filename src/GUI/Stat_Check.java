@@ -36,7 +36,7 @@ public class Stat_Check {
                     Connection connection = connectionManager.getConnection();
                     Statement stmt = connection.createStatement();
                     
-                    String sql = "SELECT \"SQUAT\", \"BENCH\", \"DEADLIFT\" FROM \"STATS\"" //where id == getid();
+                    //String sql = "SELECT \"SQUAT\", \"BENCH\", \"DEADLIFT\" FROM \"STATS\"" //where id == getid();
          return null;
                     
                                    
