@@ -6,9 +6,7 @@ import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-public class RegisterPT extends JFrame {
-//TODO - ADD USERS TO PTMEMBERS IF THEY SELECT ACTIVITY LEVEL AND THAT THEY WANT A PERSONTA TRAINER
- 
+public class RegisterPT extends JFrame { 
  
     int answer = 0;
     
