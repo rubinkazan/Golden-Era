@@ -2,7 +2,7 @@
 Fitness Application
 https://rubinkazan.github.io/Golden-Era/
 
-##Screenshots:
+#Screenshots:
 #Main Menu
 ![Screenshot](src/Images/MainScreen.png)
 
