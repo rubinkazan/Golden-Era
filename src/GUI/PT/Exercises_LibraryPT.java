@@ -51,13 +51,13 @@ public class Exercises_LibraryPT extends javax.swing.JFrame {
 
         btnHelp = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        linkField = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         btnHelp1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        linkField = new javax.swing.JLabel();
 
         btnHelp.setText("Help (?)");
         btnHelp.addActionListener(new java.awt.event.ActionListener() {
@@ -69,6 +69,8 @@ public class Exercises_LibraryPT extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        linkField.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/exerc.png"))); // NOI18N
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logomain1.png"))); // NOI18N
         jLabel1.setText(" ");
@@ -87,7 +89,7 @@ public class Exercises_LibraryPT extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Heiti SC", 0, 24)); // NOI18N
         jLabel3.setText("Exercises Library");
 
         jPanel2.setLayout(new javax.swing.OverlayLayout(jPanel2));
@@ -98,8 +100,6 @@ public class Exercises_LibraryPT extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-
-        linkField.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/exerc.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -121,7 +121,7 @@ public class Exercises_LibraryPT extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(352, 352, 352)
                                 .addComponent(jLabel3)))
-                        .addContainerGap(183, Short.MAX_VALUE))
+                        .addContainerGap(234, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton1)
                         .addGap(217, 217, 217)
@@ -143,7 +143,7 @@ public class Exercises_LibraryPT extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(54, 54, 54)
                         .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                         .addComponent(linkField, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(59, 59, 59)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
