@@ -60,34 +60,42 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel1" alignment="0" min="-2" pref="209" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
-                                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="288" max="-2" attributes="0"/>
-                                  <Component id="jLayeredPane1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="352" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="911" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
                           <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="217" max="-2" attributes="0"/>
                           <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="btnHelp1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="259" max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+                                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="352" max="-2" attributes="0"/>
+                                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="855" max="-2" attributes="0"/>
+                                          <Component id="jLayeredPane1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="346" max="-2" attributes="0"/>
+                                          <Component id="jLayeredPane2" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Component id="jLabel1" alignment="0" min="-2" pref="209" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="1643" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="951" max="-2" attributes="0"/>
+                      <Component id="jLayeredPane3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="951" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -95,28 +103,39 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" pref="207" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="285" max="-2" attributes="0"/>
-                          <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
-                          <Component id="jLayeredPane1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" pref="207" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="285" max="-2" attributes="0"/>
+                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnHelp1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="290" max="-2" attributes="0"/>
+                          <Component id="jLayeredPane1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="299" max="-2" attributes="0"/>
+                          <Component id="jLayeredPane2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="414" max="32767" attributes="0"/>
+              </Group>
+              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="294" max="-2" attributes="0"/>
+                      <Component id="jLayeredPane3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="294" max="32767" attributes="0"/>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -200,50 +219,176 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
           </Events>
         </Component>
-        <Container class="javax.swing.JLayeredPane" name="jLayeredPane1">
+        <Container class="javax.swing.JLayeredPane" name="jLayeredPane3">
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="lblChest" alignment="1" min="-2" pref="129" max="-2" attributes="0"/>
-                          <Component id="lblCalves" alignment="1" min="-2" pref="147" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="lblQuads" alignment="1" min="-2" pref="120" max="-2" attributes="0"/>
-                              <Component id="lblTraps" alignment="1" min="-2" pref="105" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="lblForearm" alignment="1" min="-2" pref="152" max="-2" attributes="0"/>
-                                          <Component id="lblNeck" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="lblShoulders" min="-2" pref="129" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Component id="lblAbs" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="lblBiceps" alignment="1" min="-2" pref="138" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="593" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="linkField" min="-2" pref="795" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblMain" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblMain" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="lblMain">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Images/exerc.png"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JLayeredPane" name="jLayeredPane2">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblGlutes" min="-2" pref="182" max="-2" attributes="0"/>
+                          <Component id="lblLowerBack" min="-2" pref="83" max="-2" attributes="0"/>
+                          <Component id="lblLats" alignment="0" min="-2" pref="126" max="-2" attributes="0"/>
+                          <Component id="lblTriceps" min="-2" pref="149" max="-2" attributes="0"/>
+                          <Component id="lblTraps1" alignment="0" min="-2" pref="96" max="-2" attributes="0"/>
+                          <Component id="lblHamstrings" alignment="0" min="-2" pref="163" max="-2" attributes="0"/>
+                          <Component id="lblCalves1" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="lblQuads1" min="-2" pref="115" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="lblMidBack" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblTraps1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblTriceps" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblLats" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblMidBack" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Component id="lblLowerBack" min="-2" pref="16" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblGlutes" min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblQuads1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Component id="lblHamstrings" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblCalves1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="lblTraps1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Traps"/>
+                <Property name="toolTipText" type="java.lang.String" value="View Exercises on the Official Bodybuilding website"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblGlutes">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="gltes"/>
+                <Property name="toolTipText" type="java.lang.String" value="View Exercises on the Official Bodybuilding website"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblLats">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="lats"/>
+                <Property name="toolTipText" type="java.lang.String" value="View Exercises on the Official Bodybuilding website"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblMidBack">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="midbk"/>
+                <Property name="toolTipText" type="java.lang.String" value="View Exercises on the Official Bodybuilding website"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblTriceps">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="triceps"/>
+                <Property name="toolTipText" type="java.lang.String" value="View Exercises on the Official Bodybuilding website"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblQuads1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="quds"/>
+                <Property name="toolTipText" type="java.lang.String" value="View Exercises on the Official Bodybuilding website"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblLowerBack">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="lowbk"/>
+                <Property name="toolTipText" type="java.lang.String" value="View Exercises on the Official Bodybuilding website"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblCalves1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Calves"/>
+                <Property name="toolTipText" type="java.lang.String" value="View Exercises on the Official Bodybuilding website"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblHamstrings">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="hm"/>
+                <Property name="toolTipText" type="java.lang.String" value="View Exercises on the Official Bodybuilding website"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JLayeredPane" name="jLayeredPane1">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="lblChest" alignment="1" min="-2" pref="129" max="-2" attributes="0"/>
+                          <Component id="lblCalves" alignment="1" min="-2" pref="147" max="-2" attributes="0"/>
+                          <Component id="lblQuads" alignment="1" min="-2" pref="120" max="-2" attributes="0"/>
+                          <Component id="lblTraps" alignment="1" min="-2" pref="105" max="-2" attributes="0"/>
+                          <Group type="103" alignment="1" groupAlignment="1" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Component id="lblForearm" alignment="1" min="-2" pref="152" max="-2" attributes="0"/>
+                                  <Component id="lblNeck" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="lblShoulders" alignment="1" min="-2" pref="129" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="lblBiceps" alignment="1" min="-2" pref="138" max="-2" attributes="0"/>
+                          <Component id="lblAbs" alignment="1" min="-2" pref="136" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="15" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Component id="lblNeck" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                       <Component id="lblTraps" min="-2" max="-2" attributes="0"/>
@@ -261,69 +406,64 @@
                       <Component id="lblQuads" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="lblCalves" min="-2" pref="25" max="-2" attributes="0"/>
-                      <EmptySpace pref="160" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="linkField" min="-2" pref="457" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="lblNeck">
+            <Component class="javax.swing.JLabel" name="lblAbs">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Neck"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="lblTraps">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Traps"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="lblShoulders">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Shoulders"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="lblChest">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Chest"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="lblBiceps">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Biceps"/>
+                <Property name="text" type="java.lang.String" value="Abs"/>
+                <Property name="toolTipText" type="java.lang.String" value="View exercises from the Official Bodybuilding website!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblForearm">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Forearm"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="lblAbs">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Abs"/>
+                <Property name="toolTipText" type="java.lang.String" value="View exercises from the Official Bodybuilding website!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblQuads">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Quads"/>
+                <Property name="toolTipText" type="java.lang.String" value="View exercises from the Official Bodybuilding website!"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblShoulders">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Shoulders"/>
+                <Property name="toolTipText" type="java.lang.String" value="View exercises from the Official Bodybuilding website!"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblTraps">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Traps"/>
+                <Property name="toolTipText" type="java.lang.String" value="View exercises from the Official Bodybuilding website!"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblBiceps">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Biceps"/>
+                <Property name="toolTipText" type="java.lang.String" value="View exercises from the Official Bodybuilding website!"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblNeck">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Neck"/>
+                <Property name="toolTipText" type="java.lang.String" value="View exercises from the Official Bodybuilding website!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblCalves">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Calves"/>
+                <Property name="toolTipText" type="java.lang.String" value="View exercises from the Official Bodybuilding website!"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="linkField">
+            <Component class="javax.swing.JLabel" name="lblChest">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Images/exerc.png"/>
-                </Property>
+                <Property name="text" type="java.lang.String" value="Chest"/>
+                <Property name="toolTipText" type="java.lang.String" value="View exercises from the Official Bodybuilding website!"/>
               </Properties>
             </Component>
           </SubComponents>
