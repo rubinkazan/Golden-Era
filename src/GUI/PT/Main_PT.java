@@ -392,7 +392,7 @@ public class Main_PT extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Workout_ProgramsPT x = new Workout_ProgramsPT();
+        Workout_ProgramsPT1 x = new Workout_ProgramsPT1();
         x.setVisible(true);
         
     }//GEN-LAST:event_jButton3ActionPerformed

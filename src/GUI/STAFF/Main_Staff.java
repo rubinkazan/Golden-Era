@@ -1,7 +1,6 @@
 
 package GUI.STAFF;
 
-import GUI.Clock;
 import GUI.End;
 import GUI.UserInfoManager;
 import java.awt.Color;
@@ -17,7 +16,6 @@ public class Main_Staff extends JFrame {
 
         
         initComponents();
-                Clock x = new Clock();
         
         UserInfoManager userInfoManager
                             = UserInfoManager.getInstance();
@@ -119,6 +117,7 @@ public class Main_Staff extends JFrame {
 
         btnClose.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnClose.setText("Close Session");
+        btnClose.setToolTipText("Shut Down Computer");
         btnClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCloseActionPerformed(evt);
