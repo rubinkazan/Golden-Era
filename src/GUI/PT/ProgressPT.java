@@ -1,6 +1,24 @@
 
 package GUI.PT;
-
+/*
+ try{
+                    ConnectionManager connectionManager = ConnectionManager.getInstance();
+                    Connection connection = connectionManager.getConnection();
+            String query = "SELECT DOB,SQUAT FROM STATS";
+            JDBCCategoryDataset dataset = new JDBCCategoryDataset(connection, query);
+            JFreeChart chart = ChartFactory.createLineChart("Test Chart", "Date", "Squat", dataset, PlotOrientation.HORIZONTAL, false, true, true);
+            BarRenderer renderer = null;
+            CategoryPlot plot = null;
+            renderer = new BarRenderer();
+            ChartFrame frame = new ChartFrame("Test Chart", chart);
+            frame.setVisible(true);
+            frame.setSize(400,650);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null,e);
+            
+        }
+*/
 import GUI.*;
 import GUI.USR.Main;
 import GUI.USR.Help;
