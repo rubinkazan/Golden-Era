@@ -19,7 +19,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 
-public class quickreg extends JFrame {
+public class Registration_Choice extends JFrame {
     
     ConnectionManager connectionManager = ConnectionManager.getInstance();
     Connection con = null;
@@ -28,7 +28,7 @@ public class quickreg extends JFrame {
    
         
 
-    public quickreg() {
+    public Registration_Choice() {
         
         Thread connectionThread = new Thread(connectionManager);
         connectionThread.start(); // Runs concurrent connection
@@ -222,7 +222,7 @@ public class quickreg extends JFrame {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new quickreg().setVisible(true);
+                new Registration_Choice().setVisible(true);
             }
         });
     }

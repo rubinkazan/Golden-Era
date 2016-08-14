@@ -40,7 +40,7 @@ public class ProgressPT extends javax.swing.JFrame {
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         UserInfoManager userInfoManager
                             = UserInfoManager.getInstance();
-        welcomeLbl.setText("Logged in as, " + userInfoManager.getName());
+        welcomeLbl.setText("How was your workout today,  " + userInfoManager.getName() + "?");
      
     }
 
@@ -56,23 +56,24 @@ public class ProgressPT extends javax.swing.JFrame {
         welcomeLbl = new javax.swing.JLabel();
         btnHelp1 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         txtDate = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        lblDate = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         txtSquat = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblSquat = new javax.swing.JLabel();
+        lblBench = new javax.swing.JLabel();
         txtBench = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         txtDeadlift = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        lblDeadlift = new javax.swing.JLabel();
         txtWeight = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        lblWeight = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
 
         btnHelp.setText("Help (?)");
         btnHelp.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +92,7 @@ public class ProgressPT extends javax.swing.JFrame {
         jLabel1.setText(" ");
 
         welcomeLbl.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        welcomeLbl.setText("Logged in as, ");
+        welcomeLbl.setText("How was your Workout today, ");
 
         btnHelp1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnHelp1.setText("Help (?)");
@@ -109,27 +110,19 @@ public class ProgressPT extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        jButton2.setText("Submit");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel8.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        jLabel8.setText("Date (YYYY-MM-DD) :");
+        lblDate.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 0, 13)); // NOI18N
+        lblDate.setText("Date (YYYY-MM-DD) :");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jLabel8)
+                .addComponent(lblDate)
                 .addGap(25, 25, 25)
                 .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -140,7 +133,7 @@ public class ProgressPT extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
+                    .addComponent(lblDate))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -152,11 +145,12 @@ public class ProgressPT extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        jLabel4.setText("Squat (kg):");
+        lblSquat.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 1, 13)); // NOI18N
+        lblSquat.setText("Squat (kg):");
+        lblSquat.setToolTipText("View Squat Progress");
 
-        jLabel2.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        jLabel2.setText("Bench Press (kg):");
+        lblBench.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 1, 13)); // NOI18N
+        lblBench.setText("Bench Press (kg):");
 
         txtBench.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,23 +164,23 @@ public class ProgressPT extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4)
-                .addGap(35, 35, 35)
-                .addComponent(txtSquat, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(jLabel2)
+                .addComponent(lblSquat)
                 .addGap(18, 18, 18)
+                .addComponent(txtSquat, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(lblBench)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtBench, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(152, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                    .addComponent(lblSquat)
                     .addComponent(txtSquat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
+                    .addComponent(lblBench)
                     .addComponent(txtBench, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
@@ -199,11 +193,11 @@ public class ProgressPT extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        jLabel5.setText("Deadlift (kg):");
+        lblDeadlift.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 0, 13)); // NOI18N
+        lblDeadlift.setText("Deadlift (kg):");
 
-        jLabel6.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        jLabel6.setText("Weight (kg):");
+        lblWeight.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 1, 13)); // NOI18N
+        lblWeight.setText("Weight (kg):");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -211,25 +205,33 @@ public class ProgressPT extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6)
-                .addGap(30, 30, 30)
+                .addComponent(lblWeight)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(37, 37, 37)
-                .addComponent(txtDeadlift, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(117, 117, 117))
+                .addGap(40, 40, 40)
+                .addComponent(lblDeadlift)
+                .addGap(47, 47, 47)
+                .addComponent(txtDeadlift, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtDeadlift, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
+                    .addComponent(lblDeadlift)
                     .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addComponent(lblWeight))
                 .addGap(0, 12, Short.MAX_VALUE))
         );
+
+        jButton2.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
+        jButton2.setText("Submit");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -242,6 +244,10 @@ public class ProgressPT extends javax.swing.JFrame {
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(210, 210, 210)
+                .addComponent(jButton2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -252,7 +258,9 @@ public class ProgressPT extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jButton3.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
@@ -265,6 +273,14 @@ public class ProgressPT extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Heiti SC", 0, 18)); // NOI18N
         jLabel7.setText("Progress Update Log");
+
+        jButton4.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
+        jButton4.setText("View Progress");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -287,18 +303,19 @@ public class ProgressPT extends javax.swing.JFrame {
                                         .addComponent(jLabel7))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(welcomeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(welcomeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton2)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1)
-                                .addGap(125, 125, 125)
-                                .addComponent(jButton3)))
+                        .addComponent(jButton1)
+                        .addGap(125, 125, 125)
+                        .addComponent(jButton3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnHelp1)
                         .addContainerGap())))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addGap(313, 313, 313))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -313,9 +330,9 @@ public class ProgressPT extends javax.swing.JFrame {
                         .addGap(34, 34, 34)
                         .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addGap(25, 25, 25)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton4)
+                .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnHelp1)
                     .addComponent(jButton1)
@@ -386,6 +403,12 @@ Stat_Check.checkStat(userInfoManager.getId(), squat, bench, deadlift, weight, do
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+       ProgressStatsPT x = new ProgressStatsPT();
+       x.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
  
     public static void main(String args[]) {
 
@@ -402,19 +425,20 @@ Stat_Check.checkStat(userInfoManager.getId(), squat, bench, deadlift, weight, do
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JLabel lblBench;
+    private javax.swing.JLabel lblDate;
+    private javax.swing.JLabel lblDeadlift;
+    private javax.swing.JLabel lblSquat;
+    private javax.swing.JLabel lblWeight;
     private javax.swing.JTextField txtBench;
     private javax.swing.JTextField txtDate;
     private javax.swing.JTextField txtDeadlift;

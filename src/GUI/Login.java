@@ -249,7 +249,7 @@ public class Login extends JFrame {
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-      quickreg x = new quickreg();
+      Registration_Choice x = new Registration_Choice();
       x.setVisible(true);
     }//GEN-LAST:event_btnRegisterActionPerformed
 
