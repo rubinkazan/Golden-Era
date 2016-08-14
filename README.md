@@ -9,3 +9,6 @@ https://rubinkazan.github.io/Golden-Era/
 #BMI Calculator
 ![Screenshot](src/Images/BMIscreen.png)
 
+#Stat Tracking/Progress Log
+Coming Soon...
+
