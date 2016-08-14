@@ -5,16 +5,33 @@
  */
 package GUI;
 
-import java.sql.Connection;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.*;
+import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.AbstractAction;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+import javax.swing.Timer;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
+import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.renderer.category.BarRenderer;
 import org.jfree.data.jdbc.JDBCCategoryDataset;
-
+import org.jfree.data.xy.XYSeries;
+import org.jfree.data.xy.XYSeriesCollection;
 
 public class StatGraph {
     
@@ -23,15 +40,15 @@ public class StatGraph {
             ConnectionManager connectionManager = ConnectionManager.getInstance();
             Connection connection = connectionManager.getConnection();
                     
-            String query = "SELECT DOB,SQUAT FROM STATS";
+            String query = "SELECT DATE,SQUAT FROM STATS";
             JDBCCategoryDataset dataset = new JDBCCategoryDataset(connection, query);
-            JFreeChart chart = ChartFactory.createLineChart("Test Chart", "Date", "Squat", dataset, PlotOrientation.VERTICAL, false, true, true);
+            JFreeChart chart = ChartFactory.createLineChart("Squat Chart", "Date", "Squat", dataset, PlotOrientation.VERTICAL, false, true, true);
             BarRenderer renderer = null;
             CategoryPlot plot = null;
             renderer = new BarRenderer();
-            ChartFrame frame = new ChartFrame("Test Chart", chart);
+            ChartFrame frame = new ChartFrame("Progress Log", chart);
             frame.setVisible(true);
-            frame.setSize(650,800);
+            frame.setSize(650,400);
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null,e);
