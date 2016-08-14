@@ -48,7 +48,7 @@ public class StatGraph {
             renderer = new BarRenderer();
             ChartFrame frame = new ChartFrame("Progress Log", chart);
             frame.setVisible(true);
-            frame.setSize(650,400);
+            frame.setSize(750,400);
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null,e);
