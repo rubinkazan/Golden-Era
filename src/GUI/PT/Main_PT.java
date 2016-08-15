@@ -259,6 +259,11 @@ public class Main_PT extends javax.swing.JFrame {
         });
 
         lblTOPBAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/barmain.png"))); // NOI18N
+        lblTOPBAR.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblTOPBARMouseClicked(evt);
+            }
+        });
 
         lblMinimi.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -422,6 +427,14 @@ public class Main_PT extends javax.swing.JFrame {
     private void lblCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCloseMouseClicked
         System.exit(0);
     }//GEN-LAST:event_lblCloseMouseClicked
+
+    private void lblTOPBARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTOPBARMouseClicked
+             int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        
+        System.out.println(x + "," + y);
+        this.setLocation(x,y);
+    }//GEN-LAST:event_lblTOPBARMouseClicked
 
  
     public static void main(String args[]) {

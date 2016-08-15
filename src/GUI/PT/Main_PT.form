@@ -470,6 +470,9 @@
                   <Image iconType="3" name="/Images/barmain.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblTOPBARMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lblMinimi">
               <Events>

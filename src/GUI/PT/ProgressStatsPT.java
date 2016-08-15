@@ -60,7 +60,7 @@ public class ProgressStatsPT extends javax.swing.JFrame {
         jLayeredPane1 = new javax.swing.JLayeredPane();
         lblClose = new javax.swing.JLabel();
         lblMinimi = new javax.swing.JLabel();
-        lblTOPBAR = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         btnHelp.setText("Help (?)");
         btnHelp.addActionListener(new java.awt.event.ActionListener() {
@@ -83,6 +83,7 @@ public class ProgressStatsPT extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -127,9 +128,17 @@ public class ProgressStatsPT extends javax.swing.JFrame {
         });
 
         panelSQ.setBackground(new java.awt.Color(255, 255, 255));
+        panelSQ.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                panelSQComponentAdded(evt);
+            }
+        });
         panelSQ.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 panelSQMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                panelSQMouseEntered(evt);
             }
         });
 
@@ -137,11 +146,11 @@ public class ProgressStatsPT extends javax.swing.JFrame {
         panelSQ.setLayout(panelSQLayout);
         panelSQLayout.setHorizontalGroup(
             panelSQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 734, Short.MAX_VALUE)
+            .addGap(0, 788, Short.MAX_VALUE)
         );
         panelSQLayout.setVerticalGroup(
             panelSQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 438, Short.MAX_VALUE)
+            .addGap(0, 470, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -152,7 +161,9 @@ public class ProgressStatsPT extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelSQ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(panelSQ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Squat", jPanel2);
@@ -163,11 +174,11 @@ public class ProgressStatsPT extends javax.swing.JFrame {
         pnlBP.setLayout(pnlBPLayout);
         pnlBPLayout.setHorizontalGroup(
             pnlBPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 734, Short.MAX_VALUE)
+            .addGap(0, 788, Short.MAX_VALUE)
         );
         pnlBPLayout.setVerticalGroup(
             pnlBPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 438, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Bench Press", pnlBP);
@@ -178,11 +189,11 @@ public class ProgressStatsPT extends javax.swing.JFrame {
         pnlDL.setLayout(pnlDLLayout);
         pnlDLLayout.setHorizontalGroup(
             pnlDLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 734, Short.MAX_VALUE)
+            .addGap(0, 788, Short.MAX_VALUE)
         );
         pnlDLLayout.setVerticalGroup(
             pnlDLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 438, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Deadlift", pnlDL);
@@ -193,11 +204,11 @@ public class ProgressStatsPT extends javax.swing.JFrame {
         pnlWG.setLayout(pnlWGLayout);
         pnlWGLayout.setHorizontalGroup(
             pnlWGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 734, Short.MAX_VALUE)
+            .addGap(0, 788, Short.MAX_VALUE)
         );
         pnlWGLayout.setVerticalGroup(
             pnlWGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 438, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Weight Gain/Loss", pnlWG);
@@ -208,14 +219,16 @@ public class ProgressStatsPT extends javax.swing.JFrame {
         pnlOV.setLayout(pnlOVLayout);
         pnlOVLayout.setHorizontalGroup(
             pnlOVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 734, Short.MAX_VALUE)
+            .addGap(0, 788, Short.MAX_VALUE)
         );
         pnlOVLayout.setVerticalGroup(
             pnlOVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 438, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Overrall", pnlOV);
+
+        jLayeredPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblClose.setText(" ");
         lblClose.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -223,47 +236,23 @@ public class ProgressStatsPT extends javax.swing.JFrame {
                 lblCloseMouseClicked(evt);
             }
         });
+        jLayeredPane1.add(lblClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 0, 25, -1));
 
         lblMinimi.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblMinimiMouseClicked(evt);
             }
         });
+        jLayeredPane1.add(lblMinimi, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 0, 14, 14));
 
-        lblTOPBAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/barmain.png"))); // NOI18N
-
-        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
-        jLayeredPane1.setLayout(jLayeredPane1Layout);
-        jLayeredPane1Layout.setHorizontalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane1Layout.createSequentialGroup()
-                .addContainerGap(668, Short.MAX_VALUE)
-                .addComponent(lblMinimi, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblClose, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(lblTOPBAR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-        jLayeredPane1Layout.setVerticalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblMinimi, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblClose))
-                .addContainerGap(16, Short.MAX_VALUE))
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                    .addGap(3, 3, 3)
-                    .addComponent(lblTOPBAR, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        jLayeredPane1.setLayer(lblClose, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(lblMinimi, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(lblTOPBAR, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/longbar.png"))); // NOI18N
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        jLayeredPane1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -276,19 +265,22 @@ public class ProgressStatsPT extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jButton1)
-                                .addGap(60, 60, 60)
+                                .addGap(366, 366, 366)
                                 .addComponent(jButton3)
-                                .addGap(217, 217, 217)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnHelp1))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(welcomeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(100, 100, 100)
                                         .addComponent(jLabel7))
-                                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(52, 52, 52)
+                                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 809, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -303,9 +295,9 @@ public class ProgressStatsPT extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
                             .addComponent(welcomeLbl))
-                        .addGap(123, 123, 123)
-                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
+                        .addGap(41, 41, 41)
+                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 257, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnHelp1)
                     .addComponent(jButton1)
@@ -361,25 +353,23 @@ public class ProgressStatsPT extends javax.swing.JFrame {
     }//GEN-LAST:event_jTabbedPane1MouseClicked
 
     private void panelSQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelSQMouseClicked
-try{
-            ConnectionManager connectionManager = ConnectionManager.getInstance();
-            Connection connection = connectionManager.getConnection();
-                    
-            String query = "SELECT DATE,SQUAT FROM STATS";
-            JDBCCategoryDataset dataset = new JDBCCategoryDataset(connection, query);
-            JFreeChart chart = ChartFactory.createLineChart("Squat Chart", "Date", "Squat", dataset, PlotOrientation.VERTICAL, false, true, true);
-            BarRenderer renderer = null;
-            CategoryPlot plot = null;
-            renderer = new BarRenderer();
-            ChartFrame frame = new ChartFrame("Progress Log", chart);
-            frame.setVisible(true);
-            frame.setSize(750,400);
-        }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(null,e);
-            
-        }        // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_panelSQMouseClicked
+
+    private void panelSQMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelSQMouseEntered
+    }//GEN-LAST:event_panelSQMouseEntered
+
+    private void panelSQComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_panelSQComponentAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panelSQComponentAdded
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+
+        System.out.println(x + "," + y);
+        this.setLocation(x,y);
+    }//GEN-LAST:event_jLabel8MouseClicked
     
  
     public static void main(String args[]) {
@@ -399,6 +389,7 @@ try{
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -406,7 +397,6 @@ try{
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel lblClose;
     private javax.swing.JLabel lblMinimi;
-    private javax.swing.JLabel lblTOPBAR;
     private javax.swing.JPanel panelSQ;
     private javax.swing.JPanel pnlBP;
     private javax.swing.JPanel pnlDL;

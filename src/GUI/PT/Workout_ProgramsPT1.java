@@ -150,6 +150,7 @@ public class Workout_ProgramsPT1 extends javax.swing.JFrame {
         jLabel4.setText("Featured Plan of the Month:");
 
         jLayeredPane2.setPreferredSize(new java.awt.Dimension(1266, 40));
+        jLayeredPane2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblClose.setText(" ");
         lblClose.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -157,49 +158,23 @@ public class Workout_ProgramsPT1 extends javax.swing.JFrame {
                 lblCloseMouseClicked(evt);
             }
         });
+        jLayeredPane2.add(lblClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 0, 25, 24));
 
         lblMinimi.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblMinimiMouseClicked(evt);
             }
         });
+        jLayeredPane2.add(lblMinimi, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 0, 20, 16));
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/longbar.png"))); // NOI18N
-
-        javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
-        jLayeredPane2.setLayout(jLayeredPane2Layout);
-        jLayeredPane2Layout.setHorizontalGroup(
-            jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane2Layout.createSequentialGroup()
-                .addContainerGap(1209, Short.MAX_VALUE)
-                .addComponent(lblMinimi, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblClose, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel5)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        jLayeredPane2Layout.setVerticalGroup(
-            jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblMinimi, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblClose, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                    .addGap(11, 11, 11)
-                    .addComponent(jLabel5)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        jLayeredPane2.setLayer(lblClose, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(lblMinimi, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        jLayeredPane2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         lbl7tips.setFont(new java.awt.Font("Heiti SC", 0, 18)); // NOI18N
 
@@ -304,7 +279,7 @@ public class Workout_ProgramsPT1 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1259, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1259, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -315,12 +290,12 @@ public class Workout_ProgramsPT1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelpActionPerformed
-        Help x = new Help();
+        HelpPT x = new HelpPT();
         x.setVisible(true);
     }//GEN-LAST:event_btnHelpActionPerformed
 
     private void btnHelp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelp1ActionPerformed
-        Help x = new Help();
+        HelpPT x = new HelpPT();
         x.setVisible(true);
     }//GEN-LAST:event_btnHelp1ActionPerformed
 
@@ -330,7 +305,7 @@ public class Workout_ProgramsPT1 extends javax.swing.JFrame {
 
     private void btnMainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainActionPerformed
 
-        Main x = new Main();
+        Main_PT x = new Main_PT();
         x.setVisible(true);
     }//GEN-LAST:event_btnMainActionPerformed
 
@@ -341,6 +316,14 @@ public class Workout_ProgramsPT1 extends javax.swing.JFrame {
     private void lblCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCloseMouseClicked
         System.exit(0);
     }//GEN-LAST:event_lblCloseMouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        
+        System.out.println(x + "," + y);
+        this.setLocation(x,y);
+    }//GEN-LAST:event_jLabel5MouseClicked
 
  
     public static void main(String args[]) {

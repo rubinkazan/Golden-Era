@@ -555,17 +555,17 @@ public class Exercises_LibraryPT extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        About x = new About();
+        AboutPT x = new AboutPT();
         x.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Main x = new Main();
+        Main_PT x = new Main_PT();
         x.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btnHelp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelp1ActionPerformed
-        Help x = new Help();
+        HelpPT x = new HelpPT();
         x.setVisible(true);
     }//GEN-LAST:event_btnHelp1ActionPerformed
 
@@ -574,7 +574,7 @@ public class Exercises_LibraryPT extends javax.swing.JFrame {
     }//GEN-LAST:event_lblCloseMouseClicked
 
     private void lblMinimiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimiMouseClicked
-        this.setState(Main_Staff.ICONIFIED);
+        this.setState(Exercises_LibraryPT.ICONIFIED);
     }//GEN-LAST:event_lblMinimiMouseClicked
 
  
