@@ -6,7 +6,7 @@ https://rubinkazan.github.io/Golden-Era/
 #Main Menu
 ![Screenshot](src/Images/Mainmenu.png)
 
-#BMI Workout Log
+#Workout Log
 ![Screenshot](src/Images/workoutol.png)
 
 #Stat Tracking/Progress Log
