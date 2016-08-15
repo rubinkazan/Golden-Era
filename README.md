@@ -4,10 +4,10 @@ https://rubinkazan.github.io/Golden-Era/
 
 #Screenshots:
 #Main Menu
-![Screenshot](src/Images/MainScreen.png)
+![Screenshot](src/Images/Mainmenu.png)
 
-#BMI Calculator
-![Screenshot](src/Images/BMIscreen.png)
+#BMI Workout Log
+![Screenshot](src/Images/workoutol.png)
 
 #Stat Tracking/Progress Log
 Coming Soon...
