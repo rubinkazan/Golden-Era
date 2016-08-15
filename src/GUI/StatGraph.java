@@ -61,7 +61,7 @@ public class StatGraph {
             ConnectionManager connectionManager = ConnectionManager.getInstance();
             Connection connection = connectionManager.getConnection();
                     
-            String query = "SELECT DATE,`BENCH PRESS` FROM STATS";
+            String query = "SELECT DATE,[BENCH PRESS] FROM STATS";
             JDBCCategoryDataset dataset = new JDBCCategoryDataset(connection, query);
             JFreeChart chart = ChartFactory.createLineChart("BenchPress Graph", "Date", "Bench Press", dataset, PlotOrientation.VERTICAL, false, true, true);
             BarRenderer renderer = null;
@@ -82,7 +82,7 @@ public class StatGraph {
             ConnectionManager connectionManager = ConnectionManager.getInstance();
             Connection connection = connectionManager.getConnection();
                     
-            String query = "SELECT DATE, DEADLIFT FROM STATS";
+            String query = "SELECT DATE, DEADLIFT FROM STATS WHERE ID"; //WHERE ID == CURRENT LOGGED IN USER
             JDBCCategoryDataset dataset = new JDBCCategoryDataset(connection, query);
             JFreeChart chart = ChartFactory.createLineChart("Dead Lift Graph", "Date", "Dead Lift", dataset, PlotOrientation.VERTICAL, false, true, true);
             BarRenderer renderer = null;

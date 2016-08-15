@@ -142,6 +142,7 @@
           </Properties>
           <Events>
             <EventHandler event="mouseDragged" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="lblTOPBARMouseDragged"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblTOPBARMouseClicked"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblMinimi">

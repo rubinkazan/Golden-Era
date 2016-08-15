@@ -38,7 +38,6 @@ public class AboutPT extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(750, 315));
 
         lblClose.setText(" ");
         lblClose.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -51,6 +50,11 @@ public class AboutPT extends javax.swing.JFrame {
         lblTOPBAR.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 lblTOPBARMouseDragged(evt);
+            }
+        });
+        lblTOPBAR.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblTOPBARMouseClicked(evt);
             }
         });
 
@@ -234,6 +238,13 @@ System.exit(0);
     private void lblMinimiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimiMouseClicked
         this.setState(Login.ICONIFIED);
     }//GEN-LAST:event_lblMinimiMouseClicked
+
+    private void lblTOPBARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTOPBARMouseClicked
+       int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+
+        System.out.println(x + "," + y);
+        this.setLocation(x,y);    }//GEN-LAST:event_lblTOPBARMouseClicked
 
     public static void main(String args[]) {
 

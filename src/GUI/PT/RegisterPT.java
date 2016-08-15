@@ -767,7 +767,7 @@ public class RegisterPT extends JFrame {
     }//GEN-LAST:event_lblTOPBARMouseDragged
 
     private void lblMinimiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimiMouseClicked
-        this.setState(Login.ICONIFIED);
+        this.setState(RegisterPT.ICONIFIED);
     }//GEN-LAST:event_lblMinimiMouseClicked
     
     private void setQuestion(){    
