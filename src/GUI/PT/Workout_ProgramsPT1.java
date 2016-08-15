@@ -13,10 +13,12 @@ import java.io.IOException;
 import java.net.URI;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
+import javax.swing.WindowConstants;
 
 public class Workout_ProgramsPT1 extends javax.swing.JFrame {
 
     public Workout_ProgramsPT1() {
+                setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         initComponents();
                 getContentPane().setBackground(Color.white);        
         UserInfoManager userInfoManager

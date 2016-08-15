@@ -6,6 +6,7 @@ import java.awt.Color;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import javax.swing.WindowConstants;
 
 
 public class AboutPT extends javax.swing.JFrame {
@@ -14,7 +15,7 @@ public class AboutPT extends javax.swing.JFrame {
     public AboutPT() {
         initComponents();
                this.getContentPane().setBackground(Color.white);
-               
+                       setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
     }
 

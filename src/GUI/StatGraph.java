@@ -56,20 +56,20 @@ public class StatGraph {
         }
     }
     
-    public void benchGraph(){
+    public static void benchGraph(){
         try{
             ConnectionManager connectionManager = ConnectionManager.getInstance();
             Connection connection = connectionManager.getConnection();
                     
-            String query = "SELECT DATE,BENCH PRESS FROM STATS";
+            String query = "SELECT DATE,`BENCH PRESS` FROM STATS";
             JDBCCategoryDataset dataset = new JDBCCategoryDataset(connection, query);
-            JFreeChart chart = ChartFactory.createLineChart("Bench Press Graph", "Date", "Bench Press", dataset, PlotOrientation.VERTICAL, false, true, true);
+            JFreeChart chart = ChartFactory.createLineChart("BenchPress Graph", "Date", "Bench Press", dataset, PlotOrientation.VERTICAL, false, true, true);
             BarRenderer renderer = null;
             CategoryPlot plot = null;
             renderer = new BarRenderer();
             ChartFrame frame = new ChartFrame("Progress Log", chart);
             frame.setVisible(true);
-            frame.setSize(650,800);
+            frame.setSize(750,400);
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null,e);
@@ -77,7 +77,7 @@ public class StatGraph {
         }
     }
     
-     public void deadLiftGraph(){
+     public static void deadLiftGraph(){
         try{
             ConnectionManager connectionManager = ConnectionManager.getInstance();
             Connection connection = connectionManager.getConnection();
@@ -90,7 +90,7 @@ public class StatGraph {
             renderer = new BarRenderer();
             ChartFrame frame = new ChartFrame("Progress Log", chart);
             frame.setVisible(true);
-            frame.setSize(650,800);
+            frame.setSize(750,400);
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null,e);
@@ -98,7 +98,7 @@ public class StatGraph {
         }
     }
      
-     public void weightGainLoss(){
+     public static void weightGainLoss(){
         try{
             ConnectionManager connectionManager = ConnectionManager.getInstance();
             Connection connection = connectionManager.getConnection();
@@ -111,7 +111,7 @@ public class StatGraph {
             renderer = new BarRenderer();
             ChartFrame frame = new ChartFrame("Progress Log", chart);
             frame.setVisible(true);
-            frame.setSize(650,800);
+            frame.setSize(750,400);
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null,e);
