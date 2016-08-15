@@ -323,7 +323,7 @@ public class Workout_ProgramsPT1 extends javax.swing.JFrame {
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
         
-        System.out.println(x + "," + y);
+        //System.out.println(x + "," + y);
         this.setLocation(x,y);
     }//GEN-LAST:event_jLabel5MouseClicked
 
