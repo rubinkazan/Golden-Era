@@ -61,6 +61,7 @@ public class BMI_Calculator extends JFrame {
 
         btnHelp.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnHelp.setText("Help (?)");
+        btnHelp.setToolTipText("Help (?)");
         btnHelp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHelpActionPerformed(evt);
@@ -81,6 +82,7 @@ public class BMI_Calculator extends JFrame {
 
         btnReturn.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnReturn.setText("Return to Main Menu");
+        btnReturn.setToolTipText("Return to Main Menu");
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReturnActionPerformed(evt);
@@ -112,6 +114,7 @@ public class BMI_Calculator extends JFrame {
 
         btnCakc.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnCakc.setText("Calculate");
+        btnCakc.setToolTipText("Display results");
         btnCakc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCakcActionPerformed(evt);
@@ -120,6 +123,7 @@ public class BMI_Calculator extends JFrame {
 
         btnExport.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnExport.setText("Export Results");
+        btnExport.setToolTipText("Export results to text file");
         btnExport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExportActionPerformed(evt);
