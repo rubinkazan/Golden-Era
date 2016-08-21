@@ -63,9 +63,9 @@ public class PTTable extends JFrame {
         jLabel5 = new javax.swing.JLabel();
         surnameField = new javax.swing.JTextField();
         jLayeredPane1 = new javax.swing.JLayeredPane();
-        lblTOPBAR = new javax.swing.JLabel();
         lblClose = new javax.swing.JLabel();
         lblMinimi = new javax.swing.JLabel();
+        lblTOPBAR = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -294,13 +294,12 @@ public class PTTable extends JFrame {
 
         jLayeredPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblTOPBAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/longbar-table.png"))); // NOI18N
-        lblTOPBAR.setMaximumSize(new java.awt.Dimension(893, 20));
-        lblTOPBAR.setMinimumSize(new java.awt.Dimension(893, 20));
-        lblTOPBAR.setPreferredSize(new java.awt.Dimension(893, 20));
-        jLayeredPane1.add(lblTOPBAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
-
         lblClose.setText(" ");
+        lblClose.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                lblCloseMouseDragged(evt);
+            }
+        });
         lblClose.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblCloseMouseClicked(evt);
@@ -314,6 +313,22 @@ public class PTTable extends JFrame {
             }
         });
         jLayeredPane1.add(lblMinimi, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 0, 14, 14));
+
+        lblTOPBAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/longbar-table.png"))); // NOI18N
+        lblTOPBAR.setMaximumSize(new java.awt.Dimension(893, 20));
+        lblTOPBAR.setMinimumSize(new java.awt.Dimension(893, 20));
+        lblTOPBAR.setPreferredSize(new java.awt.Dimension(893, 20));
+        lblTOPBAR.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                lblTOPBARMouseDragged(evt);
+            }
+        });
+        lblTOPBAR.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblTOPBARMouseClicked(evt);
+            }
+        });
+        jLayeredPane1.add(lblTOPBAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
 
         jLabel10.setFont(new java.awt.Font("Hiragino Kaku Gothic StdN", 0, 18)); // NOI18N
         jLabel10.setText("Personal Trainer Members Table Administration");
@@ -417,12 +432,16 @@ public class PTTable extends JFrame {
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-        String searchTerm = JOptionPane.showInputDialog(null, "Enter Search Term");
+        //Search using SQL Statements
+        String searchTerm = JOptionPane.showInputDialog("Enter Search Term");
         populateDataTable("SELECT * FROM PTMEMBERS WHERE NAME LIKE '%" 
-                + searchTerm + "%' OR SURNAME LIKE '%" + searchTerm + "%'");
+                + searchTerm + "%' OR SURNAME LIKE '%" + searchTerm + "%'"
+                + "OR EMAIL LIKE '%" + searchTerm + "%'"
+                + "OR DOB LIKE '%" + searchTerm + "%'");
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+                //Update using SQL Statements
         try{
             
                     ConnectionManager connectionManager = ConnectionManager.getInstance();
@@ -457,10 +476,10 @@ public class PTTable extends JFrame {
         int row = ptTable.getSelectedRow();
         if(ptTable.getSelectedRow() > -1){
             idField.setText(dataModel.getValueAt(row, 0) + "");
-            nameField.setText((String)dataModel.getValueAt(row, 1));
-            surnameField.setText((String)dataModel.getValueAt(row, 2));
-            emailField.setText((String)dataModel.getValueAt(row, 3));
-            dobField.setText((String)dataModel.getValueAt(row, 4));
+            nameField.setText((String)dataModel.getValueAt(row, 2));
+            surnameField.setText((String)dataModel.getValueAt(row, 1));
+            emailField.setText((String)dataModel.getValueAt(row, 4));
+            dobField.setText((String)dataModel.getValueAt(row, 3));
             genderField.setText((String)dataModel.getValueAt(row, 5));
             heightField.setText((String)dataModel.getValueAt(row, 6));
             weightField.setText((String)dataModel.getValueAt(row, 7));
@@ -482,6 +501,22 @@ public class PTTable extends JFrame {
     private void lblMinimiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimiMouseClicked
         this.setState(PTTable.ICONIFIED);
     }//GEN-LAST:event_lblMinimiMouseClicked
+
+    private void lblTOPBARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTOPBARMouseClicked
+
+    }//GEN-LAST:event_lblTOPBARMouseClicked
+
+    private void lblTOPBARMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTOPBARMouseDragged
+            int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        
+        System.out.println(x + "," + y);
+        this.setLocation(x,y);      
+    }//GEN-LAST:event_lblTOPBARMouseDragged
+
+    private void lblCloseMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCloseMouseDragged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblCloseMouseDragged
 
     public static void main(String args[]) {
 
@@ -514,13 +549,13 @@ public class PTTable extends JFrame {
             while (resultSet.next()){
 
                 rowData[0] = resultSet.getInt("ID");
-                rowData[1] = resultSet.getString("NAME");
-                rowData[2] = resultSet.getString("SURNAME");
-                rowData[3] = resultSet.getString("EMAIL");
-                rowData[4] = resultSet.getString("DOB");
+                rowData[1] = resultSet.getString("SURNAME");
+                rowData[2] = resultSet.getString("NAME");
+                rowData[3] = resultSet.getString("DOB");
+                rowData[4] = resultSet.getString("EMAIL");
                 rowData[5] = resultSet.getString("GENDER");
-                rowData[6] = resultSet.getString("Height");
-                rowData[7] = resultSet.getString("Weight");
+                rowData[6] = resultSet.getString("HEIGHT");
+                rowData[7] = resultSet.getString("WEIGHT");
 
 
                 dataModel.addRow(rowData);

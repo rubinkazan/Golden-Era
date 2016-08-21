@@ -12,13 +12,37 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.net.URI;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.WindowConstants;
 
 public class Main_PT extends javax.swing.JFrame {
 
     public Main_PT() {
         initComponents();
+        //Dynamic Instantiation of JLabel
+        JLabel lblWelcome = new JLabel();
+        lblWelcome = new javax.swing.JLabel();
+        lblWelcome.setBounds(20,100,120,30);
+        lblWelcome.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 0, 18));
+        lblWelcome.setText("Main");
+        this.add(lblWelcome);
+        jPanel1.add(lblWelcome);
+        this.repaint();
+        
+        //Dynamic Instantiation of JButton
+        JButton btnHelpMember = new JButton();
+        btnHelpMember = new javax.swing.JButton();
+        btnHelpMember.setBounds(60,140,160,70);
+        btnHelpMember.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 0, 18)); 
+        btnHelpMember.setText("Help(?)");
+        this.add(btnHelpMember);
+        jPanel1.add(btnHelpMember);
+        this.repaint();
+
+        
                 setLocationRelativeTo(null);
+                
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         
                 UserInfoManager userInfoManager
@@ -438,44 +462,52 @@ public class Main_PT extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBMIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBMIActionPerformed
+        //Visits BMI Calculator Frame
         BMI_CalculatorPT1 x = new BMI_CalculatorPT1();
         x.setVisible(true);
     }//GEN-LAST:event_btnBMIActionPerformed
 
     private void btnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelpActionPerformed
+        //Visits Help Frame
         HelpPT x = new HelpPT();
         x.setVisible(true);
     }//GEN-LAST:event_btnHelpActionPerformed
 
     private void btnAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutActionPerformed
+        //Visits about frame
         AboutPT x = new AboutPT();
         x.setVisible(true);
     }//GEN-LAST:event_btnAboutActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        //Visits exercise library frame
         Exercises_LibraryPT x = new Exercises_LibraryPT();
         x.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       //Visits workout program frame
         Workout_ProgramsPT1 x = new Workout_ProgramsPT1();
         x.setVisible(true);
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        //Visit Calendar frame
         String[] args = null;
 
         CalendarPT.main(args);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        //Visit Progress Frame
         ProgressPT x = new ProgressPT();
         x.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        //Visit Stats frame
         ProgressStatsPT x = new ProgressStatsPT();
         x.setVisible(true);
         this.dispose();
@@ -498,7 +530,8 @@ public class Main_PT extends javax.swing.JFrame {
     }//GEN-LAST:event_lblTOPBARMouseClicked
 
     private void btnEMailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEMailActionPerformed
-          mailKing();
+        //Calls mail method  
+        mailKing();
     }//GEN-LAST:event_btnEMailActionPerformed
 
     private void btnPfeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPfeedbackActionPerformed
@@ -529,14 +562,13 @@ public class Main_PT extends javax.swing.JFrame {
     }
  
     public static void main(String args[]) {
-
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Main_PT().setVisible(true);
             }
         });
     }
-
+private javax.swing.JLabel lblHello;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAbout;
     private javax.swing.JButton btnBMI;

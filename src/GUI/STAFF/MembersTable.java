@@ -261,6 +261,16 @@ public class MembersTable extends JFrame {
         lblTOPBAR.setMaximumSize(new java.awt.Dimension(893, 20));
         lblTOPBAR.setMinimumSize(new java.awt.Dimension(893, 20));
         lblTOPBAR.setPreferredSize(new java.awt.Dimension(893, 20));
+        lblTOPBAR.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                lblTOPBARMouseDragged(evt);
+            }
+        });
+        lblTOPBAR.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblTOPBARMouseClicked(evt);
+            }
+        });
         jLayeredPane1.add(lblTOPBAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
 
         lblClose.setText(" ");
@@ -393,9 +403,13 @@ public class MembersTable extends JFrame {
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         //Search using SQL statements
-        String searchTerm = JOptionPane.showInputDialog(null, "Enter Search Term");
+        String searchTerm = JOptionPane.showInputDialog("Enter Search Term");
         populateDataTable("SELECT * FROM MEMBERS WHERE NAME LIKE '%" 
-                + searchTerm + "%' OR SURNAME LIKE '%" + searchTerm + "%'");
+                + searchTerm + "%'");
+                /*+ "%' OR SURNAME LIKE '%" + searchTerm + "%'"
+                + "OR EMAIL LIKE '%" + searchTerm + "%'"
+                + "OR DOB LIKE '%" + searchTerm + "%'");
+                */
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
@@ -455,6 +469,18 @@ public class MembersTable extends JFrame {
     private void lblMinimiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimiMouseClicked
         this.setState(MembersTable.ICONIFIED);
     }//GEN-LAST:event_lblMinimiMouseClicked
+
+    private void lblTOPBARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTOPBARMouseClicked
+    
+    }//GEN-LAST:event_lblTOPBARMouseClicked
+
+    private void lblTOPBARMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTOPBARMouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        
+        System.out.println(x + "," + y);
+        this.setLocation(x,y);          // TODO add your handling code here:
+    }//GEN-LAST:event_lblTOPBARMouseDragged
 
     /**
      * @param args the command line arguments
