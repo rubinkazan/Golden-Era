@@ -2,19 +2,6 @@
 
 <Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Component class="javax.swing.JButton" name="btnHelp">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Help (?)"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHelpActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Countdown to Olympia: "/>
-      </Properties>
-    </Component>
     <Container class="javax.swing.JPanel" name="jPanel7">
 
       <Layout>

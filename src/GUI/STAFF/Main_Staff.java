@@ -47,12 +47,14 @@ public class Main_Staff extends JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logomain1.png"))); // NOI18N
         jLabel1.setText(" ");
+        jLabel1.setToolTipText("Golden Era Fitness\n");
 
         welcomeLbl.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         welcomeLbl.setText("Welcome, ");
 
         jButton3.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton3.setText("Manage PT Members");
+        jButton3.setToolTipText("Manage members from the Personal Trainers group");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -61,6 +63,7 @@ public class Main_Staff extends JFrame {
 
         btnManage.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnManage.setText("Manage Members");
+        btnManage.setToolTipText("Manage users from the Members Table group");
         btnManage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageActionPerformed(evt);
@@ -71,6 +74,7 @@ public class Main_Staff extends JFrame {
         jLabel2.setText("Main Menu");
 
         lblClose.setText(" ");
+        lblClose.setToolTipText("Exit");
         lblClose.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblCloseMouseClicked(evt);
@@ -211,9 +215,6 @@ public class Main_Staff extends JFrame {
         
     }//GEN-LAST:event_btnCloseActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {

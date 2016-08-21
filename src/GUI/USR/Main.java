@@ -3,8 +3,8 @@ package GUI.USR;
 
 
 import GUI.USR.Help;
+import GUI.*;
 import GUI.USR.Workout_Programs;
-import GUI.USR.Exercises_Library;
 import GUI.UserInfoManager;
 import java.awt.Desktop;
 
@@ -40,8 +40,8 @@ public class Main extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnWP = new javax.swing.JButton();
+        btnExercises = new javax.swing.JButton();
         btnBMICalc = new javax.swing.JButton();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         lblClose = new javax.swing.JLabel();
@@ -88,30 +88,34 @@ public class Main extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton5.setText("View Progress");
+        jButton5.setToolTipText("View your Fitness progress!");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        jButton3.setText("Workout Programs");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnWP.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
+        btnWP.setText("Workout Programs");
+        btnWP.setToolTipText("Browse the Official Bodybuilding workout plans");
+        btnWP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnWPActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        jButton2.setText("Exercises Library");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnExercises.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
+        btnExercises.setText("Exercises Library");
+        btnExercises.setToolTipText("Learn a new Exercise!");
+        btnExercises.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnExercisesActionPerformed(evt);
             }
         });
 
         btnBMICalc.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnBMICalc.setText("BMI Calculator");
+        btnBMICalc.setToolTipText("Calculate your BMI!");
         btnBMICalc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBMICalcActionPerformed(evt);
@@ -179,48 +183,46 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                        .addComponent(btnBMICalc)
-                        .addComponent(jButton3)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(27, 27, 27)
-                        .addComponent(jButton4)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(50, 50, 50)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(btnBMICalc)
+                    .addComponent(btnWP)
+                    .addComponent(btnExercises, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4)
+                    .addComponent(jLabel2))
+                .addGap(118, 118, 118)
                 .addComponent(btnHelp1)
-                .addGap(38, 38, 38))
+                .addGap(17, 17, 17))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGap(17, 17, 17)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
                         .addComponent(welcomeLbl)
                         .addGap(19, 19, 19)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                        .addComponent(jButton1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
                         .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(67, 67, 67)
                         .addComponent(jButton5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2)
+                        .addComponent(btnExercises)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3)
+                        .addComponent(btnWP)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnBMICalc)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton4)
-                    .addComponent(btnHelp1))
+                        .addComponent(btnBMICalc)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton4)
+                            .addComponent(btnHelp1))))
                 .addContainerGap())
         );
 
@@ -239,7 +241,7 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        BMI_Calculator x = new BMI_Calculator();
+        About x = new About();
         x.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -249,20 +251,20 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHelp1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        //Mail x = new Mail();
+       //Opens Mail client
         mailKing();
 
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnExercisesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExercisesActionPerformed
         Exercises_Library x = new Exercises_Library();
         x.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnExercisesActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnWPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWPActionPerformed
         Workout_Programs x = new Workout_Programs();
         x.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnWPActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         Progress x = new Progress();
@@ -313,10 +315,10 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBMICalc;
+    private javax.swing.JButton btnExercises;
     private javax.swing.JButton btnHelp1;
+    private javax.swing.JButton btnWP;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;

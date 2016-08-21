@@ -1,5 +1,6 @@
 package GUI.PT;
 
+import GUI.HelpNeutral;
 import GUI.Login;
 import GUI.PT.Register_Check_PT;
 import java.awt.Color;
@@ -77,7 +78,6 @@ public class RegisterPT extends JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(720, 750));
 
         jLabel1.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 0, 13)); // NOI18N
         jLabel1.setText("Registration Form");
@@ -171,6 +171,7 @@ public class RegisterPT extends JFrame {
 
         cbMonth.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         cbMonth.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-Select Option-", "January\t", "February\t", "March\t", "April\t", "May\t", "June\t", "July\t", "August\t", "September\t", "October\t", "November\t", "December" }));
+        cbMonth.setToolTipText("Select Month");
         cbMonth.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbMonthActionPerformed(evt);
@@ -208,6 +209,7 @@ public class RegisterPT extends JFrame {
 
         jLabel6.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel6.setText("Full name:");
+        jLabel6.setToolTipText("Enter your first name and surname");
 
         txtSname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -256,6 +258,7 @@ public class RegisterPT extends JFrame {
 
         cbGender.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         cbGender.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-Selection Option-", "Male", "Female" }));
+        cbGender.setToolTipText("Select your gender");
         cbGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbGenderActionPerformed(evt);
@@ -319,6 +322,7 @@ public class RegisterPT extends JFrame {
 
         btnReturn.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnReturn.setText("Return to Login Page");
+        btnReturn.setToolTipText("Return to the login page");
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReturnActionPerformed(evt);
@@ -360,6 +364,7 @@ public class RegisterPT extends JFrame {
 
         jLabel5.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jLabel5.setText("Anti Spam Check:");
+        jLabel5.setToolTipText("Anti Spam ");
 
         lblAntisp.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         lblAntisp.setText("Answer:");
@@ -466,6 +471,7 @@ public class RegisterPT extends JFrame {
 
         lblActLvl.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         lblActLvl.setText("Activity Level:");
+        lblActLvl.setToolTipText("What is your activity level?");
 
         javax.swing.GroupLayout pnlBMILayout = new javax.swing.GroupLayout(pnlBMI);
         pnlBMI.setLayout(pnlBMILayout);
@@ -580,6 +586,11 @@ public class RegisterPT extends JFrame {
 
         jButton1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton1.setText("Help (?)");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -769,6 +780,12 @@ public class RegisterPT extends JFrame {
     private void lblMinimiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimiMouseClicked
         this.setState(RegisterPT.ICONIFIED);
     }//GEN-LAST:event_lblMinimiMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+           //Takes user to netural help page (independant of Members/PT Members)
+      HelpNeutral x = new HelpNeutral();
+      x.setVisible(true);     
+    }//GEN-LAST:event_jButton1ActionPerformed
     
     private void setQuestion(){    
         int ran1 = (int) (Math.random()*10);

@@ -71,6 +71,7 @@ public class Login extends JFrame {
 
         jLabel3.setFont(new java.awt.Font("Hiragino Kaku Gothic StdN", 0, 13)); // NOI18N
         jLabel3.setText("Password:");
+        jLabel3.setToolTipText("Password");
 
         txtUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +81,7 @@ public class Login extends JFrame {
 
         jLabel13.setFont(new java.awt.Font("Hiragino Kaku Gothic StdN", 0, 13)); // NOI18N
         jLabel13.setText("Username:");
+        jLabel13.setToolTipText("Username- ID provided upon account creation");
 
         jLabel2.setFont(new java.awt.Font("Hiragino Kaku Gothic StdN", 0, 18)); // NOI18N
         jLabel2.setText("Login");
@@ -128,6 +130,7 @@ public class Login extends JFrame {
 
         btnSubmit.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnSubmit.setText("Sign-in");
+        btnSubmit.setToolTipText("Sign in with an existing account");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
@@ -136,6 +139,7 @@ public class Login extends JFrame {
 
         btnRegister.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnRegister.setText("Register");
+        btnRegister.setToolTipText("Register an account");
         btnRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegisterActionPerformed(evt);
@@ -144,6 +148,7 @@ public class Login extends JFrame {
 
         jButton1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton1.setText("About - Golden Era Fitness");
+        jButton1.setToolTipText("About Golden Era Fitness");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -152,6 +157,7 @@ public class Login extends JFrame {
 
         btnHelp.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnHelp.setText("Help (?)");
+        btnHelp.setToolTipText("Help learn about GEF");
         btnHelp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHelpActionPerformed(evt);
@@ -246,13 +252,12 @@ public class Login extends JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnSubmit)
                             .addComponent(btnRegister))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                         .addComponent(btnHelp)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
@@ -295,11 +300,10 @@ public class Login extends JFrame {
             
         }
         else{
-            JOptionPane.showMessageDialog(null, "Login Unsuccessful");
-            System.out.println("Somethings Wrong; Most Likely user exists in neither DB");
+            JOptionPane.showMessageDialog(null, "Login Unsuccessful, Please contact Administrator");
+            //System.out.println("Somethings Wrong; Most Likely user exists in neither DB");
         }
         
-       // JOptionPane.showMessageDialog(rootPane, "User does not exist. Please try again or Register an account");
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
@@ -308,12 +312,14 @@ public class Login extends JFrame {
     }//GEN-LAST:event_btnRegisterActionPerformed
 
     private void btnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelpActionPerformed
-      Help x = new Help();
+            //Takes user to netural help page (independant of Members/PT Members)
+      HelpNeutral x = new HelpNeutral();
       x.setVisible(true);
     }//GEN-LAST:event_btnHelpActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      About x = new About();
+      //Takes user to netural about page (independant of Members/PT Members)
+      AboutNeutral x = new AboutNeutral();
       x.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 

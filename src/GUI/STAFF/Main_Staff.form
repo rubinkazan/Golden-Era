@@ -112,6 +112,7 @@
               <Image iconType="3" name="/Images/logomain1.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value=" "/>
+            <Property name="toolTipText" type="java.lang.String" value="Golden Era Fitness&#xa;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="welcomeLbl">
@@ -128,6 +129,7 @@
               <Font name="Heiti SC" size="13" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Manage PT Members"/>
+            <Property name="toolTipText" type="java.lang.String" value="Manage members from the Personal Trainers group"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
@@ -139,6 +141,7 @@
               <Font name="Heiti SC" size="13" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Manage Members"/>
+            <Property name="toolTipText" type="java.lang.String" value="Manage users from the Members Table group"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageActionPerformed"/>
@@ -194,6 +197,7 @@
             <Component class="javax.swing.JLabel" name="lblClose">
               <Properties>
                 <Property name="text" type="java.lang.String" value=" "/>
+                <Property name="toolTipText" type="java.lang.String" value="Exit"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblCloseMouseClicked"/>

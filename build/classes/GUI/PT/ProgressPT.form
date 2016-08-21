@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
-  <NonVisualComponents>
-    <Component class="javax.swing.JButton" name="btnHelp">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Help (?)"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHelpActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Countdown to Olympia: "/>
-      </Properties>
-    </Component>
-  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="undecorated" type="boolean" value="true"/>
@@ -72,11 +57,11 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAbout" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
-                          <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnMain" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="btnHelp1" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnHelp" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -87,7 +72,7 @@
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="welcomeLbl" min="-2" pref="207" max="-2" attributes="0"/>
+                          <Component id="welcomeLbl" min="-2" pref="281" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -114,9 +99,9 @@
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnHelp1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnAbout" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnMain" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnHelp" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -140,7 +125,7 @@
             <Property name="text" type="java.lang.String" value="How was your Workout today, "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnHelp1">
+        <Component class="javax.swing.JButton" name="btnHelp">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Heiti SC" size="13" style="0"/>
@@ -148,10 +133,10 @@
             <Property name="text" type="java.lang.String" value="Help (?)"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHelp1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHelpActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btnAbout">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Heiti SC" size="13" style="0"/>
@@ -159,7 +144,7 @@
             <Property name="text" type="java.lang.String" value="About - Golden Era Fitness"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAboutActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel5">
@@ -202,7 +187,7 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="184" max="-2" attributes="0"/>
-                              <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnProg" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -225,7 +210,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnProg" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -244,7 +229,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="202" max="32767" attributes="0"/>
-                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -253,13 +238,13 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
-                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="jButton2">
+                <Component class="javax.swing.JButton" name="btnSubmit">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Heiti SC" size="13" style="0"/>
@@ -267,7 +252,7 @@
                     <Property name="text" type="java.lang.String" value="Submit"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSubmitActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -311,6 +296,7 @@
                       <Font name="Hiragino Kaku Gothic Std" size="13" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Date (YYYY-MM-DD) :"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Enter date in proper format"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtDate">
@@ -361,6 +347,7 @@
                       <Font name="Hiragino Kaku Gothic Std" size="13" style="1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Weight (kg):"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Enter Weight"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtWeight">
@@ -371,6 +358,7 @@
                       <Font name="Hiragino Kaku Gothic Std" size="13" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Deadlift (kg):"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Enter Deadlift Progress"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtDeadlift">
@@ -391,7 +379,7 @@
                   <Font name="Hiragino Kaku Gothic Std" size="13" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Squat (kg):"/>
-                <Property name="toolTipText" type="java.lang.String" value="View Squat Progress"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter Squat Progress"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblBench">
@@ -400,6 +388,7 @@
                   <Font name="Hiragino Kaku Gothic Std" size="13" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Bench Press (kg):"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter Bench Press Progress"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtBench">
@@ -407,7 +396,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBenchActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton4">
+            <Component class="javax.swing.JButton" name="btnProg">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Heiti SC" size="13" style="0"/>
@@ -415,12 +404,12 @@
                 <Property name="text" type="java.lang.String" value="View Progress"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnProgActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="btnMain">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Heiti SC" size="13" style="0"/>
@@ -428,7 +417,7 @@
             <Property name="text" type="java.lang.String" value="Return to Main Menu"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMainActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">

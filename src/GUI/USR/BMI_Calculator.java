@@ -320,6 +320,17 @@ public class BMI_Calculator extends JFrame {
         double weight = (Double.parseDouble(txtWeight.getText()));
         double height = (Double.parseDouble(txtHeight.getText()) / 100);
         double bmi = (height * height) / weight;
+        txaDisplay.append("Your BMI is: " + bmi);
+        
+        
+
+    }//GEN-LAST:event_btnCakcActionPerformed
+
+    private void btnExportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportActionPerformed
+        //Writes results to textfile
+        double weight = (Double.parseDouble(txtWeight.getText()));
+        double height = (Double.parseDouble(txtHeight.getText()) / 100);
+        double bmi = (height * height) / weight;
         
                         UserInfoManager userInfoManager
                             = UserInfoManager.getInstance();
@@ -336,16 +347,7 @@ public class BMI_Calculator extends JFrame {
 
         }catch (IOException e){
             e.printStackTrace();
-        }
-        
-        
-
-    }//GEN-LAST:event_btnCakcActionPerformed
-
-    private void btnExportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportActionPerformed
- 
-
-
+        } 
     }//GEN-LAST:event_btnExportActionPerformed
 
     private void lblCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCloseMouseClicked

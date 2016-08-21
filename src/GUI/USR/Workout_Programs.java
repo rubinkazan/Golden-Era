@@ -14,10 +14,12 @@ import java.io.IOException;
 import java.net.URI;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
+import javax.swing.WindowConstants;
 
 public class Workout_Programs extends javax.swing.JFrame {
 
     public Workout_Programs() {
+                setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         initComponents();
                 getContentPane().setBackground(Color.white);        
         UserInfoManager userInfoManager
@@ -77,7 +79,6 @@ public class Workout_Programs extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnHelp = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnHelp1 = new javax.swing.JButton();
@@ -95,13 +96,6 @@ public class Workout_Programs extends javax.swing.JFrame {
         lbl7tips = new javax.swing.JLabel();
         lblWome = new javax.swing.JLabel();
         lblWome1 = new javax.swing.JLabel();
-
-        btnHelp.setText("Help (?)");
-        btnHelp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHelpActionPerformed(evt);
-            }
-        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -169,7 +163,7 @@ public class Workout_Programs extends javax.swing.JFrame {
         jLayeredPane2.add(lblMinimi, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 0, 20, 16));
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/longbar.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/longstat.png"))); // NOI18N
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel5MouseClicked(evt);
@@ -280,7 +274,7 @@ public class Workout_Programs extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1259, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1259, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -290,23 +284,18 @@ public class Workout_Programs extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelpActionPerformed
-        HelpPT x = new HelpPT();
-        x.setVisible(true);
-    }//GEN-LAST:event_btnHelpActionPerformed
-
     private void btnHelp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelp1ActionPerformed
-        HelpPT x = new HelpPT();
+        Help x = new Help();
         x.setVisible(true);
     }//GEN-LAST:event_btnHelp1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+        About x = new About();
+        x.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnMainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainActionPerformed
-
-        Main_PT x = new Main_PT();
+        Main x = new Main();
         x.setVisible(true);
     }//GEN-LAST:event_btnMainActionPerformed
 
@@ -322,7 +311,7 @@ public class Workout_Programs extends javax.swing.JFrame {
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
         
-        System.out.println(x + "," + y);
+        //System.out.println(x + "," + y);
         this.setLocation(x,y);
     }//GEN-LAST:event_jLabel5MouseClicked
 
@@ -337,7 +326,6 @@ public class Workout_Programs extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnHelp;
     private javax.swing.JButton btnHelp1;
     private javax.swing.JButton btnMain;
     private javax.swing.JButton jButton1;

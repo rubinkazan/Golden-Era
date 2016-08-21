@@ -3,7 +3,6 @@ package GUI.PT;
 
 import GUI.USR.*;
 import GUI.PT.*;
-import GUI.USR.About;
 import GUI.USR.Help;
 import GUI.USR.Main;
 import GUI.UserInfoManager;
@@ -285,14 +284,14 @@ public class BMI_CalculatorPT1 extends JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelpActionPerformed
-        Help x = new Help();
+        HelpPT x = new HelpPT();
         x.setVisible(true);
                 this.dispose();
 
     }//GEN-LAST:event_btnHelpActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        About x = new About();
+        AboutPT x = new AboutPT();
         x.setVisible(true);
                 this.dispose();
 
@@ -317,6 +316,16 @@ public class BMI_CalculatorPT1 extends JFrame {
         double weight = (Double.parseDouble(txtWeight.getText()));
         double height = (Double.parseDouble(txtHeight.getText()) / 100);
         double bmi = (height * height) / weight;
+        txaDisplay.append("Your BMI is: " + bmi);
+        
+
+    }//GEN-LAST:event_btnCakcActionPerformed
+
+    private void btnExportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportActionPerformed
+        //Export data to textfile
+        double weight = (Double.parseDouble(txtWeight.getText()));
+        double height = (Double.parseDouble(txtHeight.getText()) / 100);
+        double bmi = (height * height) / weight;
         
                         UserInfoManager userInfoManager
                             = UserInfoManager.getInstance();
@@ -334,15 +343,6 @@ public class BMI_CalculatorPT1 extends JFrame {
         }catch (IOException e){
             e.printStackTrace();
         }
-        
-        
-
-    }//GEN-LAST:event_btnCakcActionPerformed
-
-    private void btnExportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportActionPerformed
- 
-
-
     }//GEN-LAST:event_btnExportActionPerformed
 
     private void lblCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCloseMouseClicked

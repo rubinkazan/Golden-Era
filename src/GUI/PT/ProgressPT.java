@@ -2,15 +2,6 @@
 package GUI.PT;
 
 import GUI.*;
-import GUI.USR.Main;
-import GUI.USR.Help;
-import GUI.PT.BMI_CalculatorPT1;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Panel;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.Timer;
 import javax.swing.WindowConstants;
 
 public class ProgressPT extends javax.swing.JFrame {    
@@ -29,16 +20,14 @@ public class ProgressPT extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnHelp = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         welcomeLbl = new javax.swing.JLabel();
-        btnHelp1 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnHelp = new javax.swing.JButton();
+        btnAbout = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        btnSubmit = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         lblDate = new javax.swing.JLabel();
         txtDate = new javax.swing.JTextField();
@@ -51,22 +40,13 @@ public class ProgressPT extends javax.swing.JFrame {
         lblSquat = new javax.swing.JLabel();
         lblBench = new javax.swing.JLabel();
         txtBench = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnProg = new javax.swing.JButton();
+        btnMain = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         lblClose = new javax.swing.JLabel();
         lblTOPBAR = new javax.swing.JLabel();
         lblMinimi = new javax.swing.JLabel();
-
-        btnHelp.setText("Help (?)");
-        btnHelp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHelpActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setText("Countdown to Olympia: ");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -79,19 +59,19 @@ public class ProgressPT extends javax.swing.JFrame {
         welcomeLbl.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         welcomeLbl.setText("How was your Workout today, ");
 
-        btnHelp1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        btnHelp1.setText("Help (?)");
-        btnHelp1.addActionListener(new java.awt.event.ActionListener() {
+        btnHelp.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
+        btnHelp.setText("Help (?)");
+        btnHelp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHelp1ActionPerformed(evt);
+                btnHelpActionPerformed(evt);
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        jButton1.setText("About - Golden Era Fitness");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnAbout.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
+        btnAbout.setText("About - Golden Era Fitness");
+        btnAbout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAboutActionPerformed(evt);
             }
         });
 
@@ -99,11 +79,11 @@ public class ProgressPT extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
-        jButton2.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        jButton2.setText("Submit");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnSubmit.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
+        btnSubmit.setText("Submit");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnSubmitActionPerformed(evt);
             }
         });
 
@@ -113,20 +93,21 @@ public class ProgressPT extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(202, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(btnSubmit)
                 .addGap(84, 84, 84))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGap(0, 11, Short.MAX_VALUE)
-                .addComponent(jButton2))
+                .addComponent(btnSubmit))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         lblDate.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 0, 13)); // NOI18N
         lblDate.setText("Date (YYYY-MM-DD) :");
+        lblDate.setToolTipText("Enter date in proper format");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -153,9 +134,11 @@ public class ProgressPT extends javax.swing.JFrame {
 
         lblWeight.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 1, 13)); // NOI18N
         lblWeight.setText("Weight (kg):");
+        lblWeight.setToolTipText("Enter Weight");
 
         lblDeadlift.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 0, 13)); // NOI18N
         lblDeadlift.setText("Deadlift (kg):");
+        lblDeadlift.setToolTipText("Enter Deadlift Progress");
 
         txtDeadlift.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,10 +180,11 @@ public class ProgressPT extends javax.swing.JFrame {
 
         lblSquat.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 1, 13)); // NOI18N
         lblSquat.setText("Squat (kg):");
-        lblSquat.setToolTipText("View Squat Progress");
+        lblSquat.setToolTipText("Enter Squat Progress");
 
         lblBench.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 1, 13)); // NOI18N
         lblBench.setText("Bench Press (kg):");
+        lblBench.setToolTipText("Enter Bench Press Progress");
 
         txtBench.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,11 +192,11 @@ public class ProgressPT extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        jButton4.setText("View Progress");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnProg.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
+        btnProg.setText("View Progress");
+        btnProg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnProgActionPerformed(evt);
             }
         });
 
@@ -244,7 +228,7 @@ public class ProgressPT extends javax.swing.JFrame {
                         .addComponent(txtBench, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(184, 184, 184)
-                        .addComponent(jButton4)))
+                        .addComponent(btnProg)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -262,15 +246,15 @@ public class ProgressPT extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4)
+                .addComponent(btnProg)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton3.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        jButton3.setText("Return to Main Menu");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnMain.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
+        btnMain.setText("Return to Main Menu");
+        btnMain.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnMainActionPerformed(evt);
             }
         });
 
@@ -343,11 +327,11 @@ public class ProgressPT extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(btnAbout)
                         .addGap(125, 125, 125)
-                        .addComponent(jButton3)
+                        .addComponent(btnMain)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnHelp1)
+                        .addComponent(btnHelp)
                         .addGap(45, 45, 45))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
@@ -356,7 +340,7 @@ public class ProgressPT extends javax.swing.JFrame {
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(welcomeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(welcomeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -376,9 +360,9 @@ public class ProgressPT extends javax.swing.JFrame {
                         .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(32, 32, 32)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3)
-                    .addComponent(btnHelp1))
+                    .addComponent(btnAbout)
+                    .addComponent(btnMain)
+                    .addComponent(btnHelp))
                 .addContainerGap())
         );
 
@@ -396,20 +380,15 @@ public class ProgressPT extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutActionPerformed
+        AboutPT x = new AboutPT();
+        x.setVisible(true);
+    }//GEN-LAST:event_btnAboutActionPerformed
+
     private void btnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelpActionPerformed
         HelpPT x = new HelpPT();
         x.setVisible(true);
     }//GEN-LAST:event_btnHelpActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        BMI_CalculatorPT1 x = new BMI_CalculatorPT1();
-        x.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void btnHelp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelp1ActionPerformed
-        HelpPT x = new HelpPT();
-        x.setVisible(true);
-    }//GEN-LAST:event_btnHelp1ActionPerformed
 
     private void txtBenchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBenchActionPerformed
         // TODO add your handling code here:
@@ -423,33 +402,31 @@ public class ProgressPT extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDeadliftActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
 
 double bench = Double.parseDouble(txtBench.getText());
 double squat = Double.parseDouble(txtSquat.getText());
 double deadlift = Double.parseDouble(txtDeadlift.getText());
 double weight = Double.parseDouble(txtWeight.getText());
-String dob = txtDate.getText();
+String date = txtDate.getText();
     UserInfoManager userInfoManager
                             = UserInfoManager.getInstance();
-Stat_Check.checkStat(userInfoManager.getId(), squat, bench, deadlift, weight, dob);
+Stat_Check.checkStat(userInfoManager.getId(), squat, bench, deadlift, weight, date);
 
-        
+    }//GEN-LAST:event_btnSubmitActionPerformed
 
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnMainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainActionPerformed
         Main_PT x = new Main_PT();
         x.setVisible(true);
         this.dispose();
 
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnMainActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnProgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProgActionPerformed
        ProgressStatsPT x = new ProgressStatsPT();
        x.setVisible(true);
        this.dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnProgActionPerformed
 
     private void lblCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCloseMouseClicked
         System.exit(0);
@@ -478,14 +455,12 @@ Stat_Check.checkStat(userInfoManager.getId(), squat, bench, deadlift, weight, do
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAbout;
     private javax.swing.JButton btnHelp;
-    private javax.swing.JButton btnHelp1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnMain;
+    private javax.swing.JButton btnProg;
+    private javax.swing.JButton btnSubmit;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;

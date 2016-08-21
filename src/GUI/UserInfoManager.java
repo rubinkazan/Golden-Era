@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package GUI;
 
-/**
- *
- * @author rubinkazan
- */
+
 public class UserInfoManager {
     
     private static UserInfoManager userInfoManager = new UserInfoManager();
@@ -17,7 +10,7 @@ public class UserInfoManager {
     private String name = "";
     private String surname = "";
     
-    private UserInfoManager(){}
+    UserInfoManager(){}
 
     public static UserInfoManager getInstance() {
         return userInfoManager;

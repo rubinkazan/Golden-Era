@@ -112,7 +112,7 @@ public class AboutPT extends javax.swing.JFrame {
         });
 
         btnReturn.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        btnReturn.setText("Return to Login");
+        btnReturn.setText("Return to Main Menu");
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReturnActionPerformed(evt);
@@ -120,7 +120,8 @@ public class AboutPT extends javax.swing.JFrame {
         });
 
         btnRead.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        btnRead.setText("Read Me");
+        btnRead.setText("About - Read");
+        btnRead.setToolTipText("Read about Golden Era Fitness");
         btnRead.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReadActionPerformed(evt);
@@ -153,18 +154,19 @@ public class AboutPT extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(50, 50, 50)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1)
-                        .addGap(101, 101, 101)
-                        .addComponent(btnReturn)
+                        .addGap(87, 87, 87)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnRead)
+                                .addGap(26, 26, 26))
+                            .addComponent(btnReturn))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnHelp)
-                        .addContainerGap())))
+                        .addComponent(btnHelp)))
+                .addContainerGap())
             .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(331, 331, 331)
-                .addComponent(btnRead))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,17 +197,19 @@ x.setVisible(true);
     }//GEN-LAST:event_btnHelpActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
 AboutPT x = new AboutPT();
 x.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-      Login x = new Login();
+      Main_PT x = new Main_PT();
       x.setVisible(true);
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void btnReadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReadActionPerformed
-  try
+//reads from a textfile
+        try
 {
     Scanner x = new Scanner(new File("About.txt"));
     while(x.hasNext())
@@ -231,7 +235,7 @@ System.exit(0);
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
 
-        System.out.println(x + "," + y);
+        //System.out.println(x + "," + y);
         this.setLocation(x,y);
     }//GEN-LAST:event_lblTOPBARMouseDragged
 
@@ -243,7 +247,7 @@ System.exit(0);
        int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
 
-        System.out.println(x + "," + y);
+        //System.out.println(x + "," + y);
         this.setLocation(x,y);    }//GEN-LAST:event_lblTOPBARMouseClicked
 
     public static void main(String args[]) {

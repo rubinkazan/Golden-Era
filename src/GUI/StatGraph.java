@@ -1,11 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package GUI;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.FlowLayout;
@@ -34,28 +31,39 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
 public class StatGraph {
-    
-    public static void squatGraph(){
+    //returning --- working on
+    /*
+    public static ChartFrame squatGraph(){
+        
+        ChartFrame returnFrame = null;
+        
          try{
             ConnectionManager connectionManager = ConnectionManager.getInstance();
             Connection connection = connectionManager.getConnection();
-                    
-            String query = "SELECT DATE,SQUAT FROM STATS";
+            //UserInfoManager user = new UserInfoManager();
+           // int username = user.getId();
+
+            String query = "SELECT DATE, SQUAT FROM STATS"; 
             JDBCCategoryDataset dataset = new JDBCCategoryDataset(connection, query);
             JFreeChart chart = ChartFactory.createLineChart("Squat Chart", "Date", "Squat", dataset, PlotOrientation.VERTICAL, false, true, true);
             BarRenderer renderer = null;
             CategoryPlot plot = null;
             renderer = new BarRenderer();
             ChartFrame frame = new ChartFrame("Progress Log", chart);
-            frame.setVisible(true);
-            frame.setSize(750,400);
+            returnFrame = frame;
+            chart.setBackgroundPaint(Color.WHITE);
+
+            //frame.setVisible(true);
+            //frame.setSize(750,400);
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null,e);
             
         }
+         
+         return returnFrame;
     }
-    
+    */
     public static void benchGraph(){
         try{
             ConnectionManager connectionManager = ConnectionManager.getInstance();
@@ -76,19 +84,43 @@ public class StatGraph {
             
         }
     }
+    public static void squatGraph(){
+        try{
+            ConnectionManager connectionManager = ConnectionManager.getInstance();
+            Connection connection = connectionManager.getConnection();
+                    
+            String query = "SELECT DATE, SQUAT FROM STATS";
+            JDBCCategoryDataset dataset = new JDBCCategoryDataset(connection, query);
+            JFreeChart chart = ChartFactory.createLineChart("Squat Graph", "Date", "Squat", dataset, PlotOrientation.VERTICAL, false, true, true);
+            BarRenderer renderer = null;
+            CategoryPlot plot = null;
+            renderer = new BarRenderer();
+            ChartFrame frame = new ChartFrame("Progress Log", chart);
+            frame.setVisible(true);
+            frame.setSize(750,400);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null,e);
+            
+        }
+    }
     
      public static void deadLiftGraph(){
         try{
             ConnectionManager connectionManager = ConnectionManager.getInstance();
             Connection connection = connectionManager.getConnection();
+            //UserInfoManager user = new UserInfoManager();
+            //int username = user.getId();
                     
-            String query = "SELECT DATE, DEADLIFT FROM STATS WHERE ID"; //WHERE ID == CURRENT LOGGED IN USER
+            String query = "SELECT DATE, DEADLIFT FROM STATS"; //WHERE ID == CURRENT LOGGED IN USER
             JDBCCategoryDataset dataset = new JDBCCategoryDataset(connection, query);
             JFreeChart chart = ChartFactory.createLineChart("Dead Lift Graph", "Date", "Dead Lift", dataset, PlotOrientation.VERTICAL, false, true, true);
             BarRenderer renderer = null;
             CategoryPlot plot = null;
             renderer = new BarRenderer();
             ChartFrame frame = new ChartFrame("Progress Log", chart);
+                        chart.setBackgroundPaint(Color.WHITE);
+
             frame.setVisible(true);
             frame.setSize(750,400);
         }
@@ -102,6 +134,9 @@ public class StatGraph {
         try{
             ConnectionManager connectionManager = ConnectionManager.getInstance();
             Connection connection = connectionManager.getConnection();
+            //UserInfoManager user = new UserInfoManager();
+
+            //int username = user.getId();
                     
             String query = "SELECT DATE, WEIGHT FROM STATS";
             JDBCCategoryDataset dataset = new JDBCCategoryDataset(connection, query);

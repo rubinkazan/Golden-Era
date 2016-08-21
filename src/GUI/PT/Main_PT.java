@@ -1,7 +1,6 @@
 
 package GUI.PT;
 
-import GUI.USR.Exercises_Library;
 import GUI.USR.Help;
 import GUI.USR.Progress;
 import GUI.UserInfoManager;
@@ -25,7 +24,7 @@ public class Main_PT extends javax.swing.JFrame {
                 UserInfoManager userInfoManager
                             = UserInfoManager.getInstance();
         welcomeLbl.setText("Welcome, " + userInfoManager.getName());
-        
+        //If clicked takes you to my Github page to submit an Issue
         btnPfeedback.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -44,12 +43,11 @@ public class Main_PT extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnHelp = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         welcomeLbl = new javax.swing.JLabel();
-        btnHelp1 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnHelp = new javax.swing.JButton();
+        btnAbout = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -72,13 +70,6 @@ public class Main_PT extends javax.swing.JFrame {
         btnEMail = new javax.swing.JButton();
         btnPfeedback = new javax.swing.JButton();
 
-        btnHelp.setText("Help (?)");
-        btnHelp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHelpActionPerformed(evt);
-            }
-        });
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setUndecorated(true);
@@ -91,19 +82,19 @@ public class Main_PT extends javax.swing.JFrame {
         welcomeLbl.setFont(new java.awt.Font("Heiti TC", 0, 13)); // NOI18N
         welcomeLbl.setText("Welcome, ");
 
-        btnHelp1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        btnHelp1.setText("Help (?)");
-        btnHelp1.addActionListener(new java.awt.event.ActionListener() {
+        btnHelp.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
+        btnHelp.setText("Help (?)");
+        btnHelp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHelp1ActionPerformed(evt);
+                btnHelpActionPerformed(evt);
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
-        jButton1.setText("About - Golden Era Fitness");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnAbout.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
+        btnAbout.setText("About - Golden Era Fitness");
+        btnAbout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAboutActionPerformed(evt);
             }
         });
 
@@ -114,6 +105,7 @@ public class Main_PT extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 0, 13)); // NOI18N
         jLabel3.setText("Performance");
+        jLabel3.setToolTipText("Check out your Performance!");
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -197,36 +189,34 @@ public class Main_PT extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 0, 13)); // NOI18N
         jLabel6.setText("Tools");
+        jLabel6.setToolTipText("Check out Tools to aid your fitness journey!");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnBMI))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnBMI)))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(jLabel6)))
                 .addContainerGap())
-            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                    .addContainerGap(59, Short.MAX_VALUE)
-                    .addComponent(jLabel6)
-                    .addGap(49, 49, 49)))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnBMI)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton4)
                 .addContainerGap(19, Short.MAX_VALUE))
-            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel5Layout.createSequentialGroup()
-                    .addGap(16, 16, 16)
-                    .addComponent(jLabel6)
-                    .addContainerGap(79, Short.MAX_VALUE)))
         );
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
@@ -241,6 +231,7 @@ public class Main_PT extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Hiragino Kaku Gothic StdN", 0, 13)); // NOI18N
         jLabel5.setText("Resources");
+        jLabel5.setToolTipText("Check out Resources!");
 
         jButton3.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton3.setText("Workout Programs");
@@ -327,6 +318,7 @@ public class Main_PT extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Hiragino Kaku Gothic Std", 0, 13)); // NOI18N
         jLabel4.setText("Support");
+        jLabel4.setToolTipText("Feedback Appreciated!");
 
         btnEMail.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         btnEMail.setText("Email Golden-Era Fitness");
@@ -387,9 +379,9 @@ public class Main_PT extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(btnAbout)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnHelp1)
+                .addComponent(btnHelp)
                 .addGap(77, 77, 77))
         );
         jPanel1Layout.setVerticalGroup(
@@ -406,8 +398,8 @@ public class Main_PT extends javax.swing.JFrame {
                         .addComponent(btnPfeedback)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnHelp1)
-                            .addComponent(jButton1))
+                            .addComponent(btnHelp)
+                            .addComponent(btnAbout))
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -455,15 +447,10 @@ public class Main_PT extends javax.swing.JFrame {
         x.setVisible(true);
     }//GEN-LAST:event_btnHelpActionPerformed
 
-    private void btnHelp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelp1ActionPerformed
-        HelpPT x = new HelpPT();
+    private void btnAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutActionPerformed
+        AboutPT x = new AboutPT();
         x.setVisible(true);
-    }//GEN-LAST:event_btnHelp1ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        BMI_CalculatorPT1 x = new BMI_CalculatorPT1();
-        x.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnAboutActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Exercises_LibraryPT x = new Exercises_LibraryPT();
@@ -515,13 +502,15 @@ public class Main_PT extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEMailActionPerformed
 
     private void btnPfeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPfeedbackActionPerformed
+
     }//GEN-LAST:event_btnPfeedbackActionPerformed
 
     private void btnPfeedbackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPfeedbackMouseClicked
        
        
     }//GEN-LAST:event_btnPfeedbackMouseClicked
- public void mailKing(){
+ //Straight forward method for opening mail client
+    public void mailKing(){
         Desktop desktop = Desktop.getDesktop();
 
         try{
@@ -549,12 +538,11 @@ public class Main_PT extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAbout;
     private javax.swing.JButton btnBMI;
     private javax.swing.JButton btnEMail;
     private javax.swing.JButton btnHelp;
-    private javax.swing.JButton btnHelp1;
     private javax.swing.JButton btnPfeedback;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

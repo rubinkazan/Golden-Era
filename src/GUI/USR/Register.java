@@ -1,5 +1,6 @@
 package GUI.USR;
 
+import GUI.HelpNeutral;
 import GUI.Login;
 import GUI.USR.Register_Check;
 import java.awt.Color;
@@ -324,6 +325,11 @@ public class Register extends JFrame {
 
         jButton1.setFont(new java.awt.Font("Heiti SC", 0, 13)); // NOI18N
         jButton1.setText("Help (?)");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -603,6 +609,12 @@ public class Register extends JFrame {
     private void lblMinimiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimiMouseClicked
         this.setState(Login.ICONIFIED);
     }//GEN-LAST:event_lblMinimiMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+           //Takes user to netural help page (independant of Members/PT Members)
+      HelpNeutral x = new HelpNeutral();
+      x.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
     
     private void setQuestion(){    
         int ran1 = (int) (Math.random()*10);

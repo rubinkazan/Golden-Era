@@ -17,6 +17,7 @@ import javax.swing.Timer;
 import javax.swing.WindowConstants;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
+import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
@@ -35,13 +36,11 @@ public class ProgressStatsPT extends javax.swing.JFrame {
      
     }
 
-  
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnHelp = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -61,15 +60,6 @@ public class ProgressStatsPT extends javax.swing.JFrame {
         lblClose = new javax.swing.JLabel();
         lblTOPBAR = new javax.swing.JLabel();
         lblMinimi = new javax.swing.JLabel();
-
-        btnHelp.setText("Help (?)");
-        btnHelp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHelpActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setText("Countdown to Olympia: ");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -362,11 +352,6 @@ public class ProgressStatsPT extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelpActionPerformed
-        HelpPT x = new HelpPT();
-        x.setVisible(true);
-    }//GEN-LAST:event_btnHelpActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         Main_PT x = new Main_PT();
         x.setVisible(true);
@@ -374,12 +359,12 @@ public class ProgressStatsPT extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        BMI_CalculatorPT1 x = new BMI_CalculatorPT1();
+        HelpPT x = new HelpPT();
         x.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnHelp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelp1ActionPerformed
-        HelpPT x = new HelpPT();
+        AboutPT x = new AboutPT();
         x.setVisible(true);
     }//GEN-LAST:event_btnHelp1ActionPerformed
 
@@ -389,13 +374,15 @@ public class ProgressStatsPT extends javax.swing.JFrame {
 
     private void panelSQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelSQMouseClicked
         StatGraph.squatGraph();
+                  panelSQ.add(StatGraph.squatGraph());
+
     }//GEN-LAST:event_panelSQMouseClicked
 
     private void panelSQMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelSQMouseEntered
     }//GEN-LAST:event_panelSQMouseEntered
 
     private void panelSQComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_panelSQComponentAdded
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_panelSQComponentAdded
 
     private void pnlBPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBPMouseClicked
@@ -403,7 +390,7 @@ public class ProgressStatsPT extends javax.swing.JFrame {
     }//GEN-LAST:event_pnlBPMouseClicked
 
     private void pnlDLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlDLMouseClicked
-    StatGraph.deadLiftGraph();        // TODO add your handling code here:
+        StatGraph.deadLiftGraph();
     }//GEN-LAST:event_pnlDLMouseClicked
 
     private void pnlWGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlWGMouseClicked
@@ -423,9 +410,10 @@ public class ProgressStatsPT extends javax.swing.JFrame {
     }//GEN-LAST:event_lblTOPBARMouseDragged
 
     private void lblMinimiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimiMouseClicked
-        this.setState(Login.ICONIFIED);
+        this.setState(ProgressStatsPT.ICONIFIED);
     }//GEN-LAST:event_lblMinimiMouseClicked
     
+  
  
     public static void main(String args[]) {
 
@@ -437,12 +425,10 @@ public class ProgressStatsPT extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnHelp;
     private javax.swing.JButton btnHelp1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;

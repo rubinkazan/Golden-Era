@@ -302,7 +302,8 @@ public class Workout_ProgramsPT1 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHelp1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+        AboutPT x = new AboutPT();
+        x.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnMainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainActionPerformed
